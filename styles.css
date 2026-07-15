@@ -904,7 +904,7 @@ h3 {
 .case-carousel-track {
   display: grid;
   gap: 18px;
-  grid-auto-columns: minmax(320px, 78%);
+  grid-auto-columns: minmax(320px, 48%);
   grid-auto-flow: column;
   overflow-x: auto;
   padding-bottom: 8px;
@@ -921,11 +921,26 @@ h3 {
   scroll-snap-align: start;
 }
 
-.case-carousel-slide img {
-  aspect-ratio: 16 / 6;
+.case-carousel-image-button {
+  background: transparent;
+  border: 0;
+  cursor: zoom-in;
   display: block;
-  height: auto;
+  overflow: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+.case-carousel-image-button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+.case-carousel-slide img {
+  aspect-ratio: 4 / 5;
+  display: block;
   object-fit: cover;
+  object-position: top center;
   width: 100%;
 }
 
@@ -934,6 +949,79 @@ h3 {
   font-size: 14px;
   font-weight: 800;
   padding: 14px 16px 16px;
+}
+
+.image-modal[hidden] {
+  display: none;
+}
+
+.image-modal {
+  align-items: center;
+  background: rgba(12, 18, 32, 0.68);
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  padding: 32px;
+  position: fixed;
+  z-index: 40;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.image-modal-content {
+  background: var(--paper);
+  border: 1px solid rgba(23, 23, 23, 0.22);
+  border-radius: 28px;
+  box-shadow: 0 24px 70px rgba(12, 18, 32, 0.3);
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  max-height: 88vh;
+  max-width: min(1120px, 100%);
+  overflow: hidden;
+  padding: 18px;
+  width: 100%;
+}
+
+.image-modal-scroll {
+  border-radius: 18px;
+  max-height: 76vh;
+  overflow: auto;
+}
+
+.image-modal-scroll img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.image-modal-content figcaption {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.image-modal-close {
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  color: var(--paper);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  padding: 12px 18px;
+  position: fixed;
+  right: 32px;
+  top: 32px;
+  z-index: 41;
+}
+
+.image-modal-close:focus-visible {
+  outline: 3px solid var(--paper);
+  outline-offset: 3px;
 }
 
 .case-content {
@@ -1243,6 +1331,25 @@ h3 {
 
   .case-carousel-track {
     grid-auto-columns: minmax(260px, 92%);
+  }
+
+  .image-modal {
+    padding: 16px;
+  }
+
+  .image-modal-content {
+    border-radius: 22px;
+    max-height: 86vh;
+    padding: 12px;
+  }
+
+  .image-modal-scroll {
+    max-height: 74vh;
+  }
+
+  .image-modal-close {
+    right: 16px;
+    top: 16px;
   }
 
   #cv {

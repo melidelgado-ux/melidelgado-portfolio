@@ -69,18 +69,76 @@
 
           <div class="case-carousel-track" tabindex="0" aria-label="Galería desplazable">
             <figure class="case-carousel-slide">
-              <img src="assets/asesuisa-slide-1.jpg" alt="Banner del sitio público actual de Asesuisa" />
-              <figcaption>Home · campaña principal</figcaption>
+              <button
+                class="case-carousel-image-button"
+                type="button"
+                data-full="assets/asesuisa-home-full.png"
+                data-caption="Home · sitio público actual"
+                aria-label="Abrir captura de la home de Asesuisa en grande"
+              >
+                <img src="assets/asesuisa-home-full.png" alt="Captura de la home actual de Asesuisa" />
+              </button>
+              <figcaption>Home · sitio público actual</figcaption>
             </figure>
             <figure class="case-carousel-slide">
-              <img src="assets/asesuisa-slide-2.webp" alt="Banner de producto del sitio público actual de Asesuisa" />
-              <figcaption>Landing · producto</figcaption>
+              <button
+                class="case-carousel-image-button"
+                type="button"
+                data-full="assets/asesuisa-auto-full.png"
+                data-caption="Seguro Auto · landing de producto"
+                aria-label="Abrir captura de la landing de seguro auto en grande"
+              >
+                <img src="assets/asesuisa-auto-full.png" alt="Captura de la landing de seguro auto de Asesuisa" />
+              </button>
+              <figcaption>Seguro Auto · landing de producto</figcaption>
             </figure>
             <figure class="case-carousel-slide">
-              <img src="assets/asesuisa-slide-3.webp" alt="Banner responsive del sitio público actual de Asesuisa" />
-              <figcaption>Landing · producto</figcaption>
+              <button
+                class="case-carousel-image-button"
+                type="button"
+                data-full="assets/asesuisa-red-medica-full.png"
+                data-caption="Red Médica · herramienta de consulta"
+                aria-label="Abrir captura de Red Médica en grande"
+              >
+                <img src="assets/asesuisa-red-medica-full.png" alt="Captura de la página Red Médica de Asesuisa" />
+              </button>
+              <figcaption>Red Médica · herramienta de consulta</figcaption>
+            </figure>
+            <figure class="case-carousel-slide">
+              <button
+                class="case-carousel-image-button"
+                type="button"
+                data-full="assets/asesuisa-contactanos-full.png"
+                data-caption="Contáctanos · canales y formulario"
+                aria-label="Abrir captura de Contáctanos en grande"
+              >
+                <img src="assets/asesuisa-contactanos-full.png" alt="Captura de la página Contáctanos de Asesuisa" />
+              </button>
+              <figcaption>Contáctanos · canales y formulario</figcaption>
+            </figure>
+            <figure class="case-carousel-slide">
+              <button
+                class="case-carousel-image-button"
+                type="button"
+                data-full="assets/asesuisa-quienes-somos-full.png"
+                data-caption="Quiénes somos · institucional"
+                aria-label="Abrir captura de Quiénes somos en grande"
+              >
+                <img src="assets/asesuisa-quienes-somos-full.png" alt="Captura de la página Quiénes somos de Asesuisa" />
+              </button>
+              <figcaption>Quiénes somos · institucional</figcaption>
             </figure>
           </div>
+        </div>
+
+        <div class="image-modal" hidden role="dialog" aria-modal="true" aria-label="Captura ampliada">
+          <button class="image-modal-close" type="button" aria-label="Cerrar captura">Cerrar</button>
+          <figure class="image-modal-content">
+            <div class="image-modal-scroll">
+              <img src="" alt="" />
+            </div>
+            <figcaption></figcaption>
+          </figure>
         </div>
 
         <div class="case-content">
@@ -170,5 +228,48 @@
       <span>Melisa Delgado · UX/UI Designer</span>
       <span>Designed with curiosity.</span>
     </footer>
+    <script>
+      const modal = document.querySelector(".image-modal");
+      const modalImage = modal.querySelector("img");
+      const modalCaption = modal.querySelector("figcaption");
+      const closeModal = modal.querySelector(".image-modal-close");
+      const imageButtons = document.querySelectorAll(".case-carousel-image-button");
+      let lastFocusedButton = null;
+
+      function openImageModal(button) {
+        lastFocusedButton = button;
+        modalImage.src = button.dataset.full;
+        modalImage.alt = button.querySelector("img").alt;
+        modalCaption.textContent = button.dataset.caption;
+        modal.hidden = false;
+        document.body.classList.add("modal-open");
+        closeModal.focus();
+      }
+
+      function hideImageModal() {
+        modal.hidden = true;
+        modalImage.src = "";
+        document.body.classList.remove("modal-open");
+        if (lastFocusedButton) {
+          lastFocusedButton.focus();
+        }
+      }
+
+      imageButtons.forEach((button) => {
+        button.addEventListener("click", () => openImageModal(button));
+      });
+
+      closeModal.addEventListener("click", hideImageModal);
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          hideImageModal();
+        }
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal.hidden) {
+          hideImageModal();
+        }
+      });
+    </script>
   </body>
 </html>
