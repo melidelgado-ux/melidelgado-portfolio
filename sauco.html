@@ -11,9 +11,9 @@
       <a class="brand" href="index.html#top">Melisa Delgado</a>
       <nav class="nav" aria-label="Principal">
         <a href="index.html#approach">Enfoque</a>
-        <a href="index.html#work">Portfolio</a>
+        <a href="portfolio.html">Portfolio</a>
         <a href="index.html#learning">Learning</a>
-        <a href="index.html#graphic">Gráfica</a>
+        <a href="graphic-design.html">Gráfica</a>
         <a href="about.html">Sobre mí</a>
       </nav>
       <a class="nav-cta" href="https://www.linkedin.com/in/melisa-lorena-delgado/" target="_blank" rel="noreferrer">¿Hablamos?</a>
@@ -49,8 +49,8 @@
       </section>
 
       <section class="section">
-        <div class="case-visual sauco-visual">
-          <span>Sauco · brand system</span>
+        <div class="case-visual case-visual-image sauco-visual">
+          <img src="assets/sauco-cover.svg" alt="Portada de identidad visual de Sauco" />
         </div>
 
         <div class="case-content">
@@ -68,6 +68,25 @@
               </p>
             </div>
           </article>
+
+          <div class="brand-gallery sauco-gallery" aria-label="Piezas visuales seleccionadas de Sauco">
+            <button class="brand-gallery-item brand-gallery-item-large" type="button" data-full="assets/sauco-materialidad.jpg" data-caption="Moodboard de materialidad, oficio y referencias visuales">
+              <img src="assets/sauco-materialidad.jpg" alt="Moodboard de materialidad para Sauco" />
+              <span>Materialidad y oficio</span>
+            </button>
+            <button class="brand-gallery-item" type="button" data-full="assets/sauco-diseno-funcional.jpg" data-caption="Pieza de comunicación sobre diseño funcional para espacios reales">
+              <img src="assets/sauco-diseno-funcional.jpg" alt="Pieza de comunicación de Sauco sobre diseño funcional" />
+              <span>Mensaje de marca</span>
+            </button>
+            <button class="brand-gallery-item" type="button" data-full="assets/sauco-servicios.jpg" data-caption="Pieza de comunicación sobre servicios y proyectos de Sauco">
+              <img src="assets/sauco-servicios.jpg" alt="Pieza de comunicación de Sauco sobre servicios" />
+              <span>Servicios</span>
+            </button>
+            <button class="brand-gallery-item" type="button" data-full="assets/sauco-mueble-funcional.jpg" data-caption="Aplicación de marca con foco en funcionalidad">
+              <img src="assets/sauco-mueble-funcional.jpg" alt="Aplicación de marca Sauco con fotografía y texto" />
+              <span>Aplicación social</span>
+            </button>
+          </div>
 
           <article class="case-section">
             <h2>El desafío</h2>
@@ -176,6 +195,20 @@
             </div>
           </article>
 
+          <article class="case-section brand-book-section">
+            <h2>Manual de identidad</h2>
+            <div>
+              <p>
+                Además del caso resumido, el proyecto cuenta con un brand book donde se
+                documentan las decisiones principales de identidad, sistema visual y
+                aplicaciones de marca.
+              </p>
+              <div class="actions brand-book-actions">
+                <a class="button primary" href="assets/sauco-brand-book.pdf" target="_blank" rel="noreferrer">Ver brand book</a>
+              </div>
+            </div>
+          </article>
+
           <article class="case-section">
             <h2>Aprendizaje</h2>
             <div>
@@ -200,5 +233,57 @@
       <span>Melisa Delgado · UX/UI Designer</span>
       <span>Designed with curiosity.</span>
     </footer>
+
+    <div class="image-modal" hidden role="dialog" aria-modal="true" aria-label="Pieza ampliada">
+      <button class="image-modal-close" type="button">Cerrar</button>
+      <figure class="image-modal-content">
+        <div class="image-modal-scroll">
+          <img src="" alt="" />
+        </div>
+        <figcaption></figcaption>
+      </figure>
+    </div>
+
+    <script>
+      (() => {
+        const modal = document.querySelector(".image-modal");
+        const modalImage = modal?.querySelector("img");
+        const modalCaption = modal?.querySelector("figcaption");
+        const closeButton = modal?.querySelector(".image-modal-close");
+        const triggers = document.querySelectorAll("[data-full]");
+        let lastFocused = null;
+
+        const closeModal = () => {
+          if (!modal || !modalImage || !modalCaption) return;
+          modal.hidden = true;
+          document.body.classList.remove("modal-open");
+          modalImage.src = "";
+          modalImage.alt = "";
+          modalCaption.textContent = "";
+          lastFocused?.focus();
+        };
+
+        triggers.forEach((trigger) => {
+          trigger.addEventListener("click", () => {
+            if (!modal || !modalImage || !modalCaption) return;
+            lastFocused = trigger;
+            modalImage.src = trigger.dataset.full || "";
+            modalImage.alt = trigger.querySelector("img")?.alt || "";
+            modalCaption.textContent = trigger.dataset.caption || "";
+            modal.hidden = false;
+            document.body.classList.add("modal-open");
+            closeButton?.focus();
+          });
+        });
+
+        closeButton?.addEventListener("click", closeModal);
+        modal?.addEventListener("click", (event) => {
+          if (event.target === modal) closeModal();
+        });
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && !modal?.hidden) closeModal();
+        });
+      })();
+    </script>
   </body>
 </html>
