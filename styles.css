@@ -563,6 +563,19 @@ h3 {
   width: 100%;
 }
 
+.project-media-image {
+  background: var(--paper-warm);
+  overflow: hidden;
+}
+
+.project-media-image img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  width: 100%;
+}
+
 .project-card:not(.project-card-large) .project-media {
   border-radius: 24px;
   margin: 14px 14px 0;
@@ -631,6 +644,10 @@ h3 {
   gap: 10px;
 }
 
+.is-hidden {
+  display: none;
+}
+
 .split-section {
   align-items: start;
   display: grid;
@@ -654,12 +671,26 @@ h3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.graphic-grid-single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 720px;
+}
+
+.graphic-grid-directory {
+  max-width: none;
+}
+
 .graphic-card {
   background: rgba(255, 253, 247, 0.82);
   border: 1px solid rgba(23, 23, 23, 0.16);
   border-radius: 28px;
   box-shadow: var(--shadow);
   overflow: hidden;
+}
+
+.graphic-card-featured {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1fr);
 }
 
 .graphic-cover {
@@ -689,8 +720,77 @@ h3 {
   background: linear-gradient(135deg, var(--green), var(--paper-warm));
 }
 
+.graphic-cover-sauco {
+  background:
+    linear-gradient(rgba(23, 23, 23, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 23, 23, 0.06) 1px, transparent 1px),
+    linear-gradient(135deg, #d7c4a1, #f6f1e6 54%, #a7b69a);
+  background-size: 22px 22px, 22px 22px, auto;
+  min-height: 100%;
+  position: relative;
+}
+
+.graphic-cover-sauco::before {
+  border: 1px solid rgba(23, 23, 23, 0.28);
+  border-radius: 999px 999px 24px 24px;
+  content: "";
+  height: 48%;
+  position: absolute;
+  right: 14%;
+  top: 16%;
+  width: 34%;
+}
+
+.graphic-cover-sauco::after {
+  background: rgba(255, 253, 247, 0.58);
+  border: 1px solid rgba(23, 23, 23, 0.18);
+  border-radius: 18px;
+  bottom: 16%;
+  content: "";
+  height: 22%;
+  left: 16%;
+  position: absolute;
+  width: 58%;
+}
+
+.graphic-cover-sauco span {
+  color: var(--ink);
+  font-size: clamp(28px, 4vw, 48px);
+  letter-spacing: 0;
+  position: relative;
+  text-transform: none;
+  z-index: 1;
+}
+
 .graphic-content {
   padding: 24px;
+}
+
+.graphic-directory {
+  padding-top: 44px;
+}
+
+.graphic-card-directory {
+  grid-template-columns: minmax(300px, 0.95fr) minmax(0, 1fr);
+  min-height: 360px;
+}
+
+.graphic-card-directory .graphic-cover {
+  aspect-ratio: auto;
+  min-height: 360px;
+}
+
+.graphic-card-directory .graphic-content {
+  align-content: center;
+  display: grid;
+  gap: 18px;
+  padding: 44px;
+}
+
+.graphic-card-directory h3 {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1;
+  margin: 0;
 }
 
 .graphic-content p {
@@ -770,6 +870,17 @@ h3 {
 
 .case-hero.case-hero-compact {
   padding-top: 8px;
+}
+
+.case-hero-full {
+  grid-template-columns: 1fr;
+}
+
+.case-hero-full > div,
+.case-hero-full h1,
+.case-hero-full .case-summary {
+  max-width: none;
+  width: 100%;
 }
 
 .case-showcase {
@@ -872,6 +983,15 @@ h3 {
   background:
     repeating-linear-gradient(0deg, rgba(35, 79, 179, 0.1), rgba(35, 79, 179, 0.1) 1px, transparent 1px, transparent 24px),
     linear-gradient(135deg, var(--accent-soft), var(--paper-warm));
+}
+
+.case-visual.sauco-visual {
+  background:
+    linear-gradient(rgba(23, 23, 23, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 23, 23, 0.055) 1px, transparent 1px),
+    linear-gradient(135deg, #d7c4a1, #f6f1e6 52%, #a7b69a);
+  background-size: 24px 24px, 24px 24px, auto;
+  color: rgba(23, 23, 23, 0.72);
 }
 
 .case-carousel {
@@ -1301,6 +1421,22 @@ h3 {
 
   .project-card-large {
     display: block;
+  }
+
+  .graphic-card-featured {
+    grid-template-columns: 1fr;
+  }
+
+  .graphic-card-directory {
+    min-height: auto;
+  }
+
+  .graphic-card-directory .graphic-cover {
+    min-height: 260px;
+  }
+
+  .graphic-card-directory .graphic-content {
+    padding: 28px;
   }
 
   .footer {
