@@ -11,11 +11,16 @@
       <a class="brand" href="index.html#top">Melisa Delgado</a>
       <nav class="nav" aria-label="Principal">
         <a href="index.html#approach">Enfoque</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="index.html#learning">Learning</a>
+        <a href="portfolio.html">UX/UI</a>
         <a href="graphic-design.html">Gráfica</a>
+        <a href="learning.html">Learning</a>
         <a href="about.html">Sobre mí</a>
       </nav>
+      <div class="language-switch" role="group" aria-label="Selector de idioma">
+        <button type="button" data-language="es" aria-pressed="true">ES</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" data-language="en" aria-pressed="false">EN</button>
+      </div>
       <a class="nav-cta" href="https://www.linkedin.com/in/melisa-lorena-delgado/" target="_blank" rel="noreferrer">¿Hablamos?</a>
     </header>
 
@@ -23,11 +28,12 @@
       <section class="case-hero section">
         <div>
           <a class="back-link" href="portfolio.html">Volver al portfolio</a>
-          <p class="eyebrow">Case Study · UI Design · CMS</p>
-          <h1>Alianza Américas: evolución visual para una web institucional bilingüe.</h1>
+          <p class="eyebrow">Diseño de interfaz · Web institucional · CMS</p>
+          <h1>Alianza Americas: comunicación visual, web institucional y recursos digitales para una ONG.</h1>
           <p class="case-summary">
-            Soporte visual, mejora continua de interfaz y diseño de nuevas secciones para una
-            ONG con contenido activo, recursos digitales y comunicación institucional.
+            Evolución visual y operativa de una web bilingüe: mejoras de interfaz, colecciones
+            CMS y capacitación para que el equipo pudiera mantener información y recursos con
+            autonomía.
           </p>
         </div>
         <aside class="case-panel" aria-label="Datos del proyecto">
@@ -38,7 +44,7 @@
             </div>
             <div>
               <dt>Periodo</dt>
-              <dd>2024 - actualidad</dd>
+              <dd>2024 - en curso</dd>
             </div>
             <div>
               <dt>Herramientas</dt>
@@ -46,81 +52,166 @@
             </div>
             <div>
               <dt>Foco</dt>
-              <dd>Visual design, accesibilidad, CMS y contenido bilingüe</dd>
+              <dd>Interfaz, accesibilidad, CMS y contenido bilingüe</dd>
             </div>
           </dl>
         </aside>
       </section>
 
-      <section class="section">
-        <div class="case-visual alianza">
-          <span>Capturas del sitio pendiente</span>
+      <section class="section case-showcase">
+        <div class="case-carousel" aria-label="Capturas del sitio de Alianza Americas">
+          <div class="case-carousel-header">
+            <div>
+              <p class="eyebrow">Sitio institucional</p>
+              <h2>Secciones y recursos del sitio</h2>
+            </div>
+            <p>Explorá las capturas completas desplazándote dentro de cada imagen. Seleccioná una para abrirla en el visor ampliado.</p>
+          </div>
+
+          <div class="case-carousel-track" tabindex="0" aria-label="Galería desplazable">
+            <figure class="case-carousel-slide">
+              <button class="case-carousel-image-button" type="button" data-full="assets/alianza-home.png" data-caption="Home · Alianza Americas" aria-label="Abrir captura completa de la home de Alianza Americas">
+                <img src="assets/alianza-home.png" alt="Captura completa de la página de inicio de Alianza Americas" />
+              </button>
+              <figcaption>Home · Alianza Americas</figcaption>
+            </figure>
+            <figure class="case-carousel-slide">
+              <button class="case-carousel-image-button" type="button" data-full="assets/alianza-inmigracion.png" data-caption="Información sobre inmigración" aria-label="Abrir captura completa de la sección sobre inmigración">
+                <img src="assets/alianza-inmigracion.png" alt="Captura completa de la sección sobre inmigración" />
+              </button>
+              <figcaption>Información sobre inmigración</figcaption>
+            </figure>
+            <figure class="case-carousel-slide">
+              <button class="case-carousel-image-button" type="button" data-full="assets/alianza-el-salvador.png" data-caption="Recursos por país · El Salvador" aria-label="Abrir captura completa de los recursos de El Salvador">
+                <img src="assets/alianza-el-salvador.png" alt="Captura completa de la página de recursos de El Salvador" />
+              </button>
+              <figcaption>Recursos por país · El Salvador</figcaption>
+            </figure>
+            <figure class="case-carousel-slide">
+              <button class="case-carousel-image-button" type="button" data-full="assets/alianza-hogares.png" data-caption="Entrada de blog" aria-label="Abrir captura completa de una entrada de blog">
+                <img src="assets/alianza-hogares.png" alt="Captura completa de una entrada de blog de Alianza Americas" />
+              </button>
+              <figcaption>Entrada de blog</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="image-modal" hidden role="dialog" aria-modal="true" aria-label="Captura ampliada">
+          <button class="image-modal-close" type="button" aria-label="Cerrar captura">Cerrar</button>
+          <figure class="image-modal-content">
+            <div class="image-modal-scroll">
+              <img src="" alt="" />
+            </div>
+            <figcaption></figcaption>
+          </figure>
         </div>
 
         <div class="case-content">
           <article class="case-section">
-            <h2>Contexto</h2>
+            <h2>Contexto del proyecto</h2>
             <div>
               <p>
-                El sitio ya tenía una propuesta visual sólida, con buena jerarquía, color y
-                estructura. Mi entrada al proyecto no fue para rehacerlo, sino para acompañar
-                su evolución, sumar riqueza visual y resolver mejoras puntuales.
+                Alianza Americas es una ONG con una web institucional bilingüe que se actualiza
+                con nuevas entradas, blogs y recursos. El sitio ya tenía una propuesta visual
+                sólida y un sistema definido por otro diseñador del equipo.
               </p>
               <p>
-                Con el tiempo el proyecto pasó a estar directamente a mi cargo, manteniendo la
-                coherencia del sistema mientras el sitio seguía creciendo con nuevos contenidos.
-              </p>
-            </div>
-          </article>
-
-          <article class="case-section">
-            <h2>Desafío</h2>
-            <div>
-              <p>
-                El principal desafío fue mejorar una web que ya funcionaba bien sin romper su
-                sistema visual ni convertir cada pedido puntual en una excepción. También hubo
-                un trabajo de explicar accesibilidad más allá del tamaño tipográfico.
+                Mi participación comenzó como soporte visual para enriquecer el sitio. Con el
+                tiempo, el proyecto pasó a estar directamente a mi cargo y mi foco se amplió a
+                pulir la interfaz, atender requerimientos de stakeholders y diseñar nuevas
+                secciones, manteniendo la coherencia de la base existente.
               </p>
             </div>
           </article>
 
           <article class="case-section">
-            <h2>Mejoras</h2>
+            <h2>El reto de diseño</h2>
             <div>
+              <p>
+                Mejorar una web que ya funcionaba bien sin romper su sistema visual ni convertir
+                cada solicitud en una excepción. Al mismo tiempo, el contenido debía seguir
+                siendo legible y fácil de recorrer mientras el cliente lo actualizaba mediante
+                colecciones.
+              </p>
+              <p>
+                También acompañé conversaciones sobre accesibilidad, explicando que no depende
+                solo del tamaño tipográfico: contraste, jerarquía, interacción, estructura,
+                navegación y claridad del contenido también influyen.
+              </p>
+            </div>
+          </article>
+
+          <article class="case-section">
+            <h2>Mejoras visuales e interactivas</h2>
+            <div>
+              <p>
+                Trabajé sobre la base visual existente con cambios puntuales para enriquecer la
+                presentación, mejorar lectura e interacción y mantener consistencia entre las
+                distintas secciones.
+              </p>
               <ul>
-                <li>Creación de patrones y recursos gráficos para banners del home.</li>
-                <li>Ajustes de contraste en secciones donde los fondos afectaban la lectura.</li>
-                <li>Rediseño de botones con estados de hover y pressed.</li>
-                <li>Modificación de comportamiento y tamaños de tarjetas.</li>
-                <li>Incorporación de galerías fotográficas en secciones específicas.</li>
+                <li>Creé patrones y recursos gráficos para banners del home.</li>
+                <li>Ajusté el contraste en secciones donde los fondos afectaban la lectura.</li>
+                <li>Rediseñé botones para incluir estados hover y pressed.</li>
+                <li>Ajusté tamaños y comportamiento de tarjetas e incorporé galerías fotográficas en secciones específicas.</li>
+                <li>Colaboré con desarrollo para asegurar una implementación fiel en Webflow.</li>
               </ul>
             </div>
           </article>
 
           <article class="case-section">
-            <h2>Recursos sobre deportaciones</h2>
+            <h2>CMS para actualizar información con autonomía</h2>
             <div>
               <p>
-                Una de las piezas más importantes fue una nueva sección de recursos para
-                personas en Estados Unidos que podían atravesar procesos de deportación.
+                Además de diseñar la interfaz, trabajé para que el equipo de Alianza Americas
+                pudiera mantener el sitio sin depender de cambios manuales para cada
+                actualización. Ajusté colecciones CMS existentes y creé nuevas colecciones
+                para que pudieran editar información importante de forma rápida y autónoma.
               </p>
               <p>
-                La solución funciona como un hub de países conectado a colecciones CMS. Cada
-                país presenta una tarjeta con nombre y bandera, y conduce a una plantilla con
-                recursos organizados por subtema, en español e inglés.
+                Organicé contenido que necesita mantenerse vigente, como direcciones,
+                teléfonos y formas de donar. También diseñé una nueva sección de recursos para
+                personas en Estados Unidos que podían estar atravesando o en riesgo de
+                atravesar procesos de deportación. Esa sección no existía previamente.
+              </p>
+              <p>
+                El hub de recursos presenta países como tarjetas con nombre e ilustración de
+                su bandera. Cada país lleva a una plantilla conectada a dos colecciones CMS:
+                países y recursos. Los recursos se pueden organizar por subtema, incluir
+                título y descripción en español e inglés y ofrecer archivos PDF, imágenes o
+                videos que se abren en una nueva pestaña. La referencia visual de las banderas
+                ayuda a orientar a personas que pueden tener dificultades de lectura.
+              </p>
+              <p>
+                Para que el sistema pudiera utilizarse en el día a día, capacité al equipo de
+                Alianza Americas en el uso de las colecciones y en la actualización de la
+                información.
               </p>
             </div>
           </article>
 
           <article class="case-section">
-            <h2>Impacto</h2>
+            <h2>Resultado</h2>
             <div>
               <ul>
-                <li>Mayor coherencia visual en banners, piezas y secciones.</li>
-                <li>Interacciones más claras en botones, tarjetas y componentes.</li>
-                <li>Nueva sección sensible y escalable mediante CMS.</li>
-                <li>Mejor soporte para contenido bilingüe y actualizaciones frecuentes.</li>
+                <li>La web cuenta con nuevos recursos gráficos y ajustes de interfaz dentro del sistema visual existente.</li>
+                <li>Botones, tarjetas y secciones incorporan ajustes de interacción y legibilidad.</li>
+                <li>Las colecciones CMS existentes se ajustaron y se crearon nuevas para administrar direcciones, teléfonos, donaciones y recursos.</li>
+                <li>La sección de recursos organiza contenido bilingüe por país y subtema mediante CMS.</li>
+                <li>El equipo recibió capacitación para actualizar el contenido con rapidez y autonomía.</li>
               </ul>
+            </div>
+          </article>
+
+          <article class="case-section">
+            <h2>Aprendizaje</h2>
+            <div>
+              <p>
+                Entrar en un proyecto avanzado requiere entender qué ya funciona antes de
+                proponer cambios. En este caso, acompañar la evolución del sistema y conversar
+                sobre criterios de accesibilidad me permitió traducir pedidos concretos en
+                mejoras de interfaz sin perder la coherencia del sitio.
+              </p>
             </div>
           </article>
 
@@ -136,5 +227,42 @@
       <span>Melisa Delgado · UX/UI Designer</span>
       <span>Designed with curiosity.</span>
     </footer>
+    <script>
+      const modal = document.querySelector(".image-modal");
+      const modalImage = modal.querySelector("img");
+      const modalCaption = modal.querySelector("figcaption");
+      const closeModal = modal.querySelector(".image-modal-close");
+      const imageButtons = document.querySelectorAll(".case-carousel-image-button");
+      let lastFocusedButton = null;
+
+      function openImageModal(button) {
+        lastFocusedButton = button;
+        modalImage.src = button.dataset.full;
+        modalImage.alt = button.querySelector("img").alt;
+        modalCaption.textContent = button.dataset.caption;
+        modal.hidden = false;
+        document.body.classList.add("modal-open");
+        closeModal.focus();
+      }
+
+      function hideImageModal() {
+        modal.hidden = true;
+        modalImage.src = "";
+        document.body.classList.remove("modal-open");
+        if (lastFocusedButton) lastFocusedButton.focus();
+      }
+
+      imageButtons.forEach((button) => {
+        button.addEventListener("click", () => openImageModal(button));
+      });
+      closeModal.addEventListener("click", hideImageModal);
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) hideImageModal();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal.hidden) hideImageModal();
+      });
+    </script>
+    <script src="translations.js" defer></script>
   </body>
 </html>

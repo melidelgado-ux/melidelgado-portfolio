@@ -11,11 +11,16 @@
       <a class="brand" href="index.html#top">Melisa Delgado</a>
       <nav class="nav" aria-label="Principal">
         <a href="index.html#approach">Enfoque</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="index.html#learning">Learning</a>
+        <a href="portfolio.html">UX/UI</a>
         <a href="graphic-design.html">Gráfica</a>
+        <a href="learning.html">Learning</a>
         <a href="about.html">Sobre mí</a>
       </nav>
+      <div class="language-switch" role="group" aria-label="Selector de idioma">
+        <button type="button" data-language="es" aria-pressed="true">ES</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" data-language="en" aria-pressed="false">EN</button>
+      </div>
       <a class="nav-cta" href="https://www.linkedin.com/in/melisa-lorena-delgado/" target="_blank" rel="noreferrer">¿Hablamos?</a>
     </header>
 
@@ -23,12 +28,12 @@
       <section class="case-hero section case-hero-compact">
         <div>
           <a class="back-link" href="portfolio.html">Volver al portfolio</a>
-          <p class="eyebrow">Case Study · UX/UI · Webflow</p>
-          <h1>Asesuisa: una web de seguros más clara, humana y escalable.</h1>
+          <p class="eyebrow">Experiencia web · Seguros · Figma + Webflow</p>
+          <h1>Asesuisa: experiencias web responsive para una marca de seguros más clara y consistente.</h1>
           <p class="case-summary">
-            Migración y rediseño integral de una experiencia web responsive, con foco en
-            claridad de navegación, consistencia visual, design system, CMS y componentes
-            pensados para crecer.
+            Migración del sitio legacy a Webflow y rediseño progresivo de la experiencia
+            digital, con foco en claridad, consistencia visual y una implementación preparada
+            para crecer.
           </p>
         </div>
         <aside class="case-panel" aria-label="Datos del proyecto">
@@ -39,7 +44,7 @@
             </div>
             <div>
               <dt>Periodo</dt>
-              <dd>2025 - actualidad</dd>
+              <dd>2025 - en curso (2026)</dd>
             </div>
             <div>
               <dt>Herramientas</dt>
@@ -47,7 +52,7 @@
             </div>
             <div>
               <dt>Foco</dt>
-              <dd>Rediseño web, design system, CMS y responsive</dd>
+              <dd>Migración, rediseño web, design system y CMS</dd>
             </div>
           </dl>
         </aside>
@@ -57,13 +62,12 @@
         <div class="case-carousel" aria-label="Capturas del sitio público actual de Asesuisa">
           <div class="case-carousel-header">
             <div>
-              <p class="eyebrow">Sitio público actual</p>
-              <h2>Referencias visuales de Asesuisa.com</h2>
+              <p class="eyebrow">Punto de partida</p>
+              <h2>El sitio público que dio contexto al proyecto</h2>
             </div>
             <p>
-              El rediseño todavía está en construcción. Estas piezas corresponden al sitio
-              público vigente y funcionan como referencia visual del ecosistema que se está
-              ordenando.
+              Estas capturas corresponden al sitio público vigente y muestran el ecosistema
+              analizado. El rediseño continúa en proceso; no representan la propuesta nueva.
             </p>
           </div>
 
@@ -143,76 +147,128 @@
 
         <div class="case-content">
           <article class="case-section">
-            <h2>Contexto</h2>
+            <h2>Contexto de negocio</h2>
             <div>
               <p>
-                El trabajo comenzó con la migración del sitio legacy a Webflow, proponiendo
-                mejoras sobre el diseño existente. Luego evolucionó hacia un rediseño integral
-                del sitio: home, páginas institucionales y landings por tipo de seguro.
+                Asesuisa necesitaba migrar su sitio legacy a una plataforma que permitiera
+                mayor autonomía, consistencia y agilidad para implementar ajustes. En 2025,
+                el trabajo se enfocó en trasladar el diseño existente a Webflow, cuidando la
+                fidelidad visual y proponiendo mejoras puntuales de experiencia, estructura y
+                comportamiento responsive.
               </p>
               <p>
-                El objetivo fue acercar la marca a las personas, mejorar la orientación del
-                usuario y preparar una estructura visual y técnica que pudiera sostener nuevos
-                productos, planes y contenidos.
+                Después, el proyecto evolucionó hacia el rediseño integral del sitio: home,
+                páginas generales y landings para seguros de auto, vida, salud y otros
+                productos. Cada producto puede incluir distintos planes, por lo que la
+                estructura debe contemplar su crecimiento futuro.
               </p>
             </div>
           </article>
 
           <article class="case-section">
-            <h2>Problema</h2>
+            <h2>El problema del sitio</h2>
             <div>
+              <p>
+                La experiencia debía acercar la marca a las personas y facilitar la
+                comprensión y contratación de seguros, sin perder continuidad con el sitio
+                existente ni proponer soluciones difíciles de implementar en Webflow.
+              </p>
               <ul>
-                <li>La experiencia visual estaba alejada del manual de marca.</li>
-                <li>Había poca jerarquía visual y headers muy similares entre secciones.</li>
-                <li>Algunos componentes funcionaban en desktop, pero se rompían en mobile.</li>
-                <li>La estructura CMS estaba fragmentada en múltiples colecciones.</li>
+                <li>La experiencia visual se alejaba de la línea gráfica del manual de marca e incluía ilustraciones 3D fuera de ese sistema.</li>
+                <li>La interfaz dependía casi por completo del azul institucional y tenía poca jerarquía visual.</li>
+                <li>Headers y banners similares entre secciones dificultaban reconocer dónde estaba la persona dentro del sitio.</li>
+                <li>Algunos elementos funcionaban en desktop, pero se rompían o necesitaban versiones alternativas en mobile.</li>
+                <li>El CMS estaba fragmentado en colecciones separadas para páginas, productos y planes.</li>
               </ul>
             </div>
           </article>
 
           <article class="case-section">
-            <h2>Proceso</h2>
+            <h2>El reto de diseño</h2>
             <div>
               <p>
-                Antes del rediseño se realizó una etapa de análisis, benchmark y levantamiento
-                con stakeholders. Esa etapa permitió identificar patrones útiles, oportunidades
-                de mejora y criterios para justificar decisiones visuales y funcionales.
+                Diseñar una experiencia más clara y humana, con navegación y contenido
+                consistentes, que funcionara en distintos tamaños de pantalla y pudiera
+                sostener nuevos productos y planes. El rediseño se aborda de forma progresiva,
+                equilibrando las necesidades de marca con la viabilidad técnica en Webflow.
               </p>
+            </div>
+          </article>
+
+          <article class="case-section">
+            <h2>Análisis antes del rediseño</h2>
+            <div>
               <p>
-                El trabajo de diseño parte desde Figma, pero pensado desde el inicio para
-                Webflow: componentes posibles de implementar, tokens replicados en ambos
-                sistemas y ajustes reales según las capacidades de la herramienta.
+                La etapa de análisis, inicialmente estimada en dos meses, se extendió a tres,
+                casi cuatro, por necesidades operativas. Se revisó el sitio existente, se
+                relevaron necesidades del stakeholder principal y se hizo un benchmark de
+                competidores para encontrar patrones útiles, fortalezas y oportunidades de
+                mejora frente a la experiencia actual.
               </p>
             </div>
           </article>
 
           <div class="case-two-column">
             <article class="case-note-card">
-              <h3>Design system</h3>
+              <h3>Decisión · un sistema visual consistente</h3>
               <p>
-                Definición de colores, tipografías, espaciados, botones, cards, formularios y
-                componentes reutilizables para mantener consistencia entre Figma y Webflow.
+                Definir tokens de color, tipografía y espaciado en Figma y replicarlos en
+                Webflow. Construir componentes base —botones, cards y formularios— para
+                mantener consistencia entre páginas y facilitar futuras iteraciones.
               </p>
             </article>
             <article class="case-note-card">
-              <h3>CMS escalable</h3>
+              <h3>Decisión · una experiencia reconocible y escalable</h3>
               <p>
-                Propuesta para consolidar colecciones de planes y productos, reduciendo
-                complejidad y preparando el sitio para futuras iteraciones.
+                Reemplazar ilustraciones 3D por fotografías reales de personas y usar colores
+                de apoyo por tipo de producto. Mantener una estructura común para las landings,
+                variando color, jerarquía y contenido para distinguir cada seguro.
               </p>
             </article>
           </div>
 
           <article class="case-section">
-            <h2>Resultado parcial</h2>
+            <h2>Diseño pensado para construirse</h2>
             <div>
+              <p>
+                La propuesta se trabaja primero en Figma, con Webflow en mente desde el inicio.
+                Antes de definir interacciones o animaciones, se investigan componentes,
+                referencias y librerías disponibles para evaluar su viabilidad. Los ajustes
+                necesarios se reflejan en ambos entornos para sostener la coherencia entre
+                diseño e implementación.
+              </p>
               <ul>
-                <li>Sistema de tokens replicado entre Figma y Webflow.</li>
-                <li>Componentes reutilizables para landings y planes.</li>
-                <li>Mayor alineación visual con el manual de marca.</li>
-                <li>Responsive pensado desde el inicio para desktop, tablet y mobile.</li>
-                <li>Validaciones semanales con cliente y stakeholders.</li>
+                <li>Se diseñan componentes reutilizables y una estructura de landing consistente.</li>
+                <li>Se contempla el comportamiento responsive desde el diseño.</li>
+                <li>Se trabaja en consolidar las colecciones CMS para reducir fragmentación y facilitar la gestión de distintos planes.</li>
+                <li>Las propuestas se presentan y validan semanalmente con el cliente y stakeholders antes de construir las secciones finales en Webflow.</li>
               </ul>
+            </div>
+          </article>
+
+          <article class="case-section">
+            <h2>Avances e impacto esperado</h2>
+            <div>
+              <p>
+                El proyecto sigue en curso y el rediseño todavía no está publicado. Hasta
+                ahora, el trabajo establece una base de tokens compartida entre Figma y
+                Webflow, componentes reutilizables, una propuesta de CMS más simple y una
+                dirección visual más alineada con el manual de marca. Estas bases permitirán
+                evaluar mejoras de conversión después de publicar el rediseño; aún no hay
+                resultados de conversión que reportar.
+              </p>
+            </div>
+          </article>
+
+          <article class="case-section">
+            <h2>Aprendizaje</h2>
+            <div>
+              <p>
+                Diseñar en Figma y construir en Webflow como partes del mismo sistema ayuda a
+                que las propuestas puedan validarse, implementarse y mantenerse. Investigar
+                las posibilidades técnicas antes de definir componentes e interacciones
+                permite tomar decisiones visuales con la implementación real en mente.
+              </p>
             </div>
           </article>
 
@@ -271,5 +327,6 @@
         }
       });
     </script>
+    <script src="translations.js" defer></script>
   </body>
 </html>
