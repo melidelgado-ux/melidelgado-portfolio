@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Luma · Learning by Building · Melisa Delgado</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#top">Melisa Delgado</a>
+      <nav class="nav" aria-label="Principal"><a href="index.html#approach">Enfoque</a><a href="portfolio.html">UX/UI</a><a href="graphic-design.html">Gráfica</a><a href="learning.html">Learning</a><a href="about.html">Sobre mí</a></nav>
+      <div class="language-switch" role="group" aria-label="Selector de idioma"><button type="button" data-language="es" aria-pressed="true">ES</button><span aria-hidden="true">·</span><button type="button" data-language="en" aria-pressed="false">EN</button></div>
+      <a class="nav-cta" href="https://www.linkedin.com/in/melisa-lorena-delgado/" target="_blank" rel="noreferrer">¿Hablamos?</a>
+    </header>
+    <main class="case-main">
+      <section class="case-hero section learning-case-hero">
+        <div>
+          <a class="back-link" href="learning.html">Volver a Learning</a>
+          <p class="eyebrow">Learning by Building · Prototipo personal</p>
+          <h1>Luma</h1>
+          <p class="case-summary">Un prototipo web para reunir las finanzas personales y el trabajo freelance en un mismo lugar, y reemplazar parte del seguimiento que hoy se hace en una planilla.</p>
+          <a class="button secondary brilla-app-link" href="https://luma-control-de-gastos.vercel.app/" target="_blank" rel="noreferrer">Explorar la app</a>
+        </div>
+        <aside class="case-panel">
+          <h2>Ficha del proyecto</h2>
+          <dl>
+            <div><dt>Tipo</dt><dd>Prototipo web personal</dd></div>
+            <div><dt>Tecnologías</dt><dd>HTML · CSS · JavaScript · Firebase</dd></div>
+            <div><dt>Última edición</dt><dd>Junio 2026</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="section case-content learning-case-content">
+        <article class="case-section">
+          <h2>La oportunidad</h2>
+          <div>
+            <p>El punto de partida fue reunir las finanzas personales y el trabajo freelance en un mismo lugar, reemplazando parte del seguimiento que hoy se hace en una planilla. Luma propone consultar movimientos, pagos e ingresos sin perder de vista las tareas y proyectos freelance.</p>
+            <p>El reto del prototipo es hacer convivir información personal y laboral —incluidos montos en distintas monedas— en una experiencia centralizada para revisar y actualizar.</p>
+          </div>
+        </article>
+
+        <div class="case-two-column learning-feature-grid">
+          <article class="case-note-card"><p class="eyebrow">01 · Finanzas</p><h3>Registrar ingresos y gastos</h3><p>Permite cargar gastos en pesos argentinos o dólares, registrar ingresos y anotar cotizaciones del dólar.</p></article>
+          <article class="case-note-card"><p class="eyebrow">02 · Pagos</p><h3>Seguir vencimientos</h3><p>Los avisos y el seguimiento de pagos ayudan a tener presentes vencimientos y estados pendientes.</p></article>
+          <article class="case-note-card"><p class="eyebrow">03 · Trabajo freelance</p><h3>Registrar horas por tarea</h3><p>Permite anotar horas trabajadas y asociarlas a tareas y proyectos freelance.</p></article>
+          <article class="case-note-card"><p class="eyebrow">04 · Tablero</p><h3>Consultar el panorama</h3><p>Un tablero reúne totales, avisos y estadísticas organizadas por categoría.</p></article>
+          <article class="case-note-card"><p class="eyebrow">05 · Organización</p><h3>Gestionar categorías y proyectos</h3><p>La información se puede organizar con categorías y proyectos que se gestionan desde la app.</p></article>
+          <article class="case-note-card"><p class="eyebrow">06 · Exportación</p><h3>Llevar los datos a una planilla</h3><p>La exportación CSV permite abrir y seguir trabajando con los datos en Google Sheets.</p></article>
+        </div>
+
+        <article class="case-section">
+          <h2>Diseño y construcción</h2>
+          <div>
+            <p>La interfaz está construida con HTML, CSS y JavaScript. Firebase Authentication gestiona el acceso y Firestore guarda los datos asociados a cada usuario.</p>
+            <p>Las reglas de Firestore restringen el acceso de cada cuenta a sus propios datos. El prototipo contempla ingreso con Google y una alternativa con nombre y email que utiliza autenticación anónima.</p>
+          </div>
+        </article>
+
+        <article class="case-section learning-limitation">
+          <h2>Alcance actual</h2>
+          <div>
+            <p>El prototipo reúne el seguimiento de finanzas personales y trabajo freelance en una sola experiencia: permite registrar gastos e ingresos, seguir pagos y cotizaciones, cargar horas por tarea y proyecto, consultar resúmenes y exportar los datos a CSV. El período configurado actualmente es junio de 2026; el mes y algunos cálculos no avanzan automáticamente.</p>
+          </div>
+        </article>
+        <nav class="case-nav" aria-label="Navegación de Learning"><a class="text-link" href="learning.html">Volver a Learning</a><a class="text-link" href="brilla.html">Proyecto anterior: Brilla en Movimiento</a><a class="text-link" href="para-nuestro-canelon.html">Siguiente proyecto: Del recuerdo al reencuentro</a></nav>
+      </section>
+    </main>
+    <footer class="footer"><span>Melisa Delgado · UX/UI Designer</span><span>Designed with curiosity.</span></footer>
+    <script src="translations.js" defer></script>
+  </body>
+</html>
