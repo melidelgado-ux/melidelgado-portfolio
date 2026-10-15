@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <title>UI Kit local · Melisa Delgado</title>
+    <script>
+      (() => {
+        const host = window.location.hostname.toLowerCase();
+        const isLocal =
+          window.location.protocol === "file:" ||
+          host === "localhost" ||
+          host === "127.0.0.1" ||
+          host === "::1";
+
+        if (isLocal) {
+          document.documentElement.dataset.localUiKit = "true";
+        } else {
+          window.location.replace("./index.html");
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="ui-kit.css" />
+  </head>
+  <body class="ui-kit-page">
+    <header class="site-header ui-kit-live-header">
+      <a class="brand" href="index.html">Melisa Delgado</a>
+      <nav class="nav" aria-label="Vista previa de navegación">
+        <a href="#">UX/UI</a>
+        <a href="#">Diseño Gráfico</a>
+        <a href="#" aria-current="page">Experimentos</a>
+        <a href="#">Sobre mí</a>
+      </nav>
+      <div class="language-switch" aria-label="Selector de idioma de ejemplo">
+        <button type="button" aria-pressed="true">ES</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" aria-pressed="false">EN</button>
+      </div>
+      <a class="nav-cta" href="#">¿Hablamos?</a>
+    </header>
+
+    <main class="ui-kit-shell">
+      <section class="ui-kit-intro">
+        <p class="eyebrow">Sistema visual · v2.2</p>
+        <h1>UI Kit</h1>
+        <p>
+          Catálogo local de componentes reutilizables. Los nombres entre comillas son los que
+          usaremos para pedir ajustes y aplicarlos de forma consistente en el sitio.
+        </p>
+      </section>
+
+      <section class="ui-kit-section" aria-labelledby="ui-kit-tokens-title">
+        <div class="ui-kit-section-heading">
+          <p class="eyebrow">01 · Fundamentos</p>
+          <h2 id="ui-kit-tokens-title">Tokens de color</h2>
+          <p>Valores compartidos del tema actual, centralizados en variables CSS.</p>
+        </div>
+        <div class="ui-kit-color-grid">
+          <div><span style="--swatch: var(--paper)"></span><code>paper</code><small>#F5F2E9</small></div>
+          <div><span style="--swatch: var(--paper-warm)"></span><code>paper-warm</code><small>#FFFDF7</small></div>
+          <div><span style="--swatch: var(--ink)"></span><code>ink</code><small>#171717</small></div>
+          <div><span style="--swatch: var(--accent)"></span><code>accent</code><small>#174AA9</small></div>
+          <div><span style="--swatch: var(--accent-soft)"></span><code>accent-soft</code><small>#E4ECFF</small></div>
+          <div><span style="--swatch: var(--muted)"></span><code>muted</code><small>#66615B</small></div>
+          <div><span style="--swatch: var(--pink)"></span><code>pink</code><small>#F6BDC9</small></div>
+          <div><span style="--swatch: var(--yellow)"></span><code>yellow</code><small>#F5DF8C</small></div>
+          <div><span style="--swatch: var(--green)"></span><code>green</code><small>#C8DF9B</small></div>
+          <div><span style="--swatch: var(--blue)"></span><code>blue</code><small>#BFE2EA</small></div>
+        </div>
+      </section>
+
+      <section class="ui-kit-section" aria-labelledby="ui-kit-type-title">
+        <div class="ui-kit-section-heading">
+          <p class="eyebrow">02 · Fundamentos</p>
+          <h2 id="ui-kit-type-title">Tipografías</h2>
+          <p>Familias tipográficas compartidas por la interfaz y los acentos manuscritos.</p>
+        </div>
+        <div class="ui-kit-type-family-note"><strong>Headings</strong><span><code>--font-heading</code> · Source Serif Pro (Source Serif 4)</span><strong>Body</strong><span><code>--font-system</code> · Manrope</span><strong>Acentos</strong><span><code>--font-handwritten</code> · Schoolbell · 400 Regular</span><p>Source Serif Pro se sirve como Source Serif 4, su versión actual. Las familias se cargan desde Google Fonts; si no hay conexión, se usan Georgia, system-ui y cursive.</p></div>
+        <div class="ui-kit-type-specimen-grid">
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-display</code><span>Hero principal · H1</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-display); --specimen-weight: var(--weight-bold); --specimen-line: 1.02; --specimen-family: var(--font-heading);">La curiosidad mató al gato.</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-display)</dd></div><div><dt>Familia</dt><dd>Source Serif Pro</dd></div><div><dt>Peso</dt><dd>700 · Bold</dd></div><div><dt>Interlineado</dt><dd>1.02</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-section</code><span>Título de sección · H2</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-section); --specimen-weight: var(--weight-bold); --specimen-line: 1.05; --specimen-family: var(--font-heading);">Proyectos destacados</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-section)</dd></div><div><dt>Familia</dt><dd>Source Serif Pro</dd></div><div><dt>Peso</dt><dd>700 · Bold</dd></div><div><dt>Interlineado</dt><dd>1.05</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-case-title</code><span>Hero de caso · H1</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-case-title); --specimen-weight: var(--weight-bold); --specimen-line: 1.05; --specimen-family: var(--font-heading);">Caso de estudio</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-case-title)</dd></div><div><dt>Familia</dt><dd>Source Serif Pro</dd></div><div><dt>Peso</dt><dd>700 · Bold</dd></div><div><dt>Interlineado</dt><dd>1.05</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-case-heading</code><span>Bloques de caso · H2</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-case-heading); --specimen-weight: var(--weight-bold); --specimen-line: 1.1; --specimen-family: var(--font-system);">Contexto de negocio</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-case-heading)</dd></div><div><dt>Familia</dt><dd>Manrope</dd></div><div><dt>Peso</dt><dd>700 · Bold</dd></div><div><dt>Interlineado</dt><dd>1.1</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-card-title</code><span>Título de card · H3</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-card-title); --specimen-weight: var(--weight-bold); --specimen-line: 1.15; --specimen-family: var(--font-system);">Asesuisa</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-card-title)</dd></div><div><dt>Familia</dt><dd>Manrope</dd></div><div><dt>Peso</dt><dd>700 · Bold</dd></div><div><dt>Interlineado</dt><dd>1.15</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-learning-title</code><span>Título de Learning card</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-learning-title); --specimen-weight: var(--weight-bold); --specimen-line: 1.08; --specimen-family: var(--font-system);">Brilla en Movimiento</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-learning-title)</dd></div><div><dt>Familia</dt><dd>Manrope</dd></div><div><dt>Peso</dt><dd>700 · Bold</dd></div><div><dt>Interlineado</dt><dd>1.08</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-landscape-title</code><span>Título de Project card/landscape</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-landscape-title); --specimen-weight: var(--weight-bold); --specimen-line: 1.08; --specimen-family: var(--font-system);">Sublimes Manjares</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-landscape-title)</dd></div><div><dt>Familia</dt><dd>Manrope</dd></div><div><dt>Peso</dt><dd>700 · Bold</dd></div><div><dt>Interlineado</dt><dd>1.08</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-lead</code><span>Bajada / resumen</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-lead); --specimen-weight: var(--weight-lead); --specimen-line: 1.5; --specimen-family: var(--font-system);">Diseñar experiencias claras, humanas y escalables.</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-lead)</dd></div><div><dt>Familia</dt><dd>Manrope</dd></div><div><dt>Peso</dt><dd>750 · Lead</dd></div><div><dt>Interlineado</dt><dd>1.5</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-body-default</code><span>Texto base de interfaz</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-body-default); --specimen-weight: var(--weight-regular); --specimen-line: 1.5; --specimen-family: var(--font-system);">Navegación, controles y texto general.</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-body-default)</dd></div><div><dt>Familia</dt><dd>Manrope</dd></div><div><dt>Peso</dt><dd>400 · Regular</dd></div><div><dt>Interlineado</dt><dd>1.5</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-body</code><span>Texto de lectura</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-body); --specimen-weight: var(--weight-regular); --specimen-line: 1.6; --specimen-family: var(--font-system);">Trabajo entre estrategia, interfaz y comunicación visual.</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-body)</dd></div><div><dt>Familia</dt><dd>Manrope</dd></div><div><dt>Peso</dt><dd>400 · Regular</dd></div><div><dt>Interlineado</dt><dd>1.6</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-body-small</code><span>Texto auxiliar</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-body-small); --specimen-weight: var(--weight-regular); --specimen-line: 1.55; --specimen-family: var(--font-system);">Información complementaria para acompañar el contenido.</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-body-small)</dd></div><div><dt>Familia</dt><dd>Manrope</dd></div><div><dt>Peso</dt><dd>400 · Regular</dd></div><div><dt>Interlineado</dt><dd>1.55</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-caption</code><span>Caption / eyebrow</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-caption); --specimen-weight: var(--weight-black); --specimen-line: 1.3; --specimen-family: var(--font-system);">PROYECTOS DESTACADOS</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-caption)</dd></div><div><dt>Familia</dt><dd>Manrope</dd></div><div><dt>Peso</dt><dd>900 · Black</dd></div><div><dt>Interlineado</dt><dd>1.3</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-caption</code><span>Navegación</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-caption); --specimen-weight: var(--weight-bold); --specimen-line: 1.2; --specimen-family: var(--font-system);">DISEÑO GRÁFICO</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-caption)</dd></div><div><dt>Familia</dt><dd>Manrope</dd></div><div><dt>Peso</dt><dd>700 · Bold</dd></div><div><dt>Interlineado</dt><dd>1.2</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-badge</code><span>Badges</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-badge); --specimen-weight: var(--weight-extrabold); --specimen-line: 1.2; --specimen-family: var(--font-system);">UX/UI</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-badge)</dd></div><div><dt>Familia</dt><dd>Manrope</dd></div><div><dt>Peso</dt><dd>800 · Extra bold</dd></div><div><dt>Interlineado</dt><dd>1.2</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-micro</code><span>Microcopy / idioma</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-micro); --specimen-weight: var(--weight-extrabold); --specimen-line: 1.2; --specimen-family: var(--font-system);">ES · EN</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-micro)</dd></div><div><dt>Familia</dt><dd>Manrope</dd></div><div><dt>Peso</dt><dd>800 · Extra bold</dd></div><div><dt>Interlineado</dt><dd>1.2</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-cta</code><span>CTA / botón</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-cta); --specimen-weight: var(--weight-extrabold); --specimen-line: 1.2; --specimen-family: var(--font-system);">Ver portfolio</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-cta)</dd></div><div><dt>Familia</dt><dd>Manrope</dd></div><div><dt>Peso</dt><dd>800 · Extra bold</dd></div><div><dt>Interlineado</dt><dd>1.2</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-caption</code><span>Datos de caso</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-caption); --specimen-weight: var(--weight-black); --specimen-line: 1.3; --specimen-family: var(--font-system);">ROL DEL PROYECTO</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-caption)</dd></div><div><dt>Familia</dt><dd>Manrope</dd></div><div><dt>Peso</dt><dd>900 · Black</dd></div><div><dt>Interlineado</dt><dd>1.3</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-note</code><span>Nota manuscrita</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-note); --specimen-weight: var(--weight-regular); --specimen-line: 1.2; --specimen-family: var(--font-handwritten);">Preguntar, entender, ordenar.</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-note)</dd></div><div><dt>Familia</dt><dd>Handwritten</dd></div><div><dt>Peso</dt><dd>400 · Regular</dd></div><div><dt>Interlineado</dt><dd>1.2</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-visual-note</code><span>Nota de apoyo visual</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-visual-note); --specimen-weight: var(--weight-regular); --specimen-line: 1.25; --specimen-family: var(--font-handwritten);">Una idea dibujada para acompañar.</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-visual-note)</dd></div><div><dt>Familia</dt><dd>Handwritten</dd></div><div><dt>Peso</dt><dd>400 · Regular</dd></div><div><dt>Interlineado</dt><dd>1.25</dd></div></dl>
+          </article>
+          <article class="ui-kit-type-specimen">
+            <div class="ui-kit-type-specimen-head"><code>--type-manifest</code><span>Manifiesto manuscrito</span></div>
+            <p class="ui-kit-type-render" style="--specimen-size: var(--type-manifest); --specimen-weight: var(--weight-regular); --specimen-line: 1.2; --specimen-family: var(--font-handwritten);">curiosity as a method</p>
+            <dl><div><dt>Tamaño</dt><dd>var(--type-manifest)</dd></div><div><dt>Familia</dt><dd>Handwritten</dd></div><div><dt>Peso</dt><dd>400 · Regular</dd></div><div><dt>Interlineado</dt><dd>1.2</dd></div></dl>
+          </article>
+        </div>
+        <div class="ui-kit-weight-scale"><strong>Escala de peso</strong><span>400 Regular</span><span>500 Medium</span><span>600 Semibold</span><span>700 Bold</span><span>750 Lead</span><span>800 Extra bold</span><span>900 Black</span></div>
+        <p class="ui-kit-code-note">Las muestras usan los tokens reales del sitio. Las escalas con clamp() cambian fluidamente según el viewport; la grilla se adapta de tres columnas a dos y luego a una sin recortar los ejemplos.</p>
+      </section>
+
+      <section class="ui-kit-section" aria-labelledby="ui-kit-buttons-title">
+        <div class="ui-kit-section-heading">
+          <p class="eyebrow">03 · Acciones</p>
+          <h2 id="ui-kit-buttons-title">Estados de botones</h2>
+          <p>Default, hover, focus, active y disabled. Hover, focus y active se muestran como vistas de referencia.</p>
+        </div>
+
+        <div class="ui-kit-state-grid">
+          <div class="ui-kit-state-label" aria-hidden="true"></div>
+          <div class="ui-kit-state-label">Default</div>
+          <div class="ui-kit-state-label">Hover</div>
+          <div class="ui-kit-state-label">Focus</div>
+          <div class="ui-kit-state-label">Active</div>
+          <div class="ui-kit-state-label">Disabled</div>
+
+          <code class="ui-kit-component-name">button-primary</code>
+          <button class="button primary" type="button">Ver portfolio</button>
+          <button class="button primary" type="button" data-preview-state="hover">Ver portfolio</button>
+          <button class="button primary" type="button" data-preview-state="focus">Ver portfolio</button>
+          <button class="button primary" type="button" data-preview-state="active">Ver portfolio</button>
+          <button class="button primary" type="button" disabled>Ver portfolio</button>
+
+          <code class="ui-kit-component-name">button-secondary</code>
+          <a class="button secondary" href="#">Ver más trabajos</a>
+          <a class="button secondary" href="#" data-preview-state="hover">Ver más trabajos</a>
+          <a class="button secondary" href="#" data-preview-state="focus">Ver más trabajos</a>
+          <a class="button secondary" href="#" data-preview-state="active">Ver más trabajos</a>
+          <button class="button secondary" type="button" disabled>Ver más trabajos</button>
+
+          <code class="ui-kit-component-name">button-contact</code>
+          <a class="nav-cta" href="#">¿Hablamos?</a>
+          <a class="nav-cta" href="#" data-preview-state="hover">¿Hablamos?</a>
+          <a class="nav-cta" href="#" data-preview-state="focus">¿Hablamos?</a>
+          <a class="nav-cta" href="#" data-preview-state="active">¿Hablamos?</a>
+          <span class="nav-cta" aria-disabled="true">¿Hablamos?</span>
+
+          <code class="ui-kit-component-name">button-text</code>
+          <a class="text-link ui-kit-text-button" href="#">Leer caso</a>
+          <a class="text-link ui-kit-text-button" href="#" data-preview-state="hover">Leer caso</a>
+          <a class="text-link ui-kit-text-button" href="#" data-preview-state="focus">Leer caso</a>
+          <a class="text-link ui-kit-text-button" href="#" data-preview-state="active">Leer caso</a>
+          <span class="text-link ui-kit-text-button" aria-disabled="true">Leer caso</span>
+        </div>
+
+        <div class="ui-kit-name-list">
+          <p><code>button-primary</code> → <code>.button.primary</code></p>
+          <p><code>button-secondary</code> → <code>.button.secondary</code></p>
+          <p><code>button-contact</code> → <code>.nav-cta</code></p>
+          <p><code>button-text</code> → <code>.text-link</code></p>
+          <p><code>button-language</code> → <code>.language-switch button</code></p>
+          <p><code>button-gallery</code> → <code>.case-carousel-image-button</code></p>
+          <p><code>button-modal-close</code> → <code>.image-modal-close</code></p>
+        </div>
+      </section>
+
+      <section class="ui-kit-section" aria-labelledby="ui-kit-navigation-title">
+        <div class="ui-kit-section-heading">
+          <p class="eyebrow">04 · Navegación</p>
+          <h2 id="ui-kit-navigation-title">Navbar y marca</h2>
+          <p>La vista superior usa los mismos selectores globales que las páginas del portfolio.</p>
+        </div>
+        <div class="ui-kit-component-panel ui-kit-navigation-demo">
+          <a class="brand" href="#">Melisa Delgado</a>
+          <nav class="nav" aria-label="Ejemplo de enlaces de navegación">
+            <a href="#">UX/UI</a>
+            <a href="#">Diseño Gráfico</a>
+            <a href="#" aria-current="page">Experimentos</a>
+            <a href="#">Sobre mí</a>
+          </nav>
+          <p class="ui-kit-code-note"><code>navbar</code> · <code>nav-link</code> · <code>brand-link</code></p>
+        </div>
+        <div class="ui-kit-case-navigation">
+          <h3>Navegación entre casos</h3>
+          <p>Un patrón compartido por UX/UI, Diseño Gráfico y Experimentos. “Caso anterior” queda a la izquierda; “Siguiente caso” a la derecha.</p>
+          <div class="ui-kit-case-navigation-grid">
+            <article class="ui-kit-case-navigation-sample">
+              <strong>Primer caso</strong>
+              <nav class="case-nav" aria-label="Primer caso">
+                <a class="button primary" href="#">Siguiente caso</a>
+              </nav>
+              <code>case-nav/first</code>
+            </article>
+            <article class="ui-kit-case-navigation-sample">
+              <strong>Caso intermedio</strong>
+              <nav class="case-nav" aria-label="Caso intermedio">
+                <a class="button secondary" href="#">Caso anterior</a>
+                <a class="button primary" href="#">Siguiente caso</a>
+              </nav>
+              <code>case-nav/middle</code>
+            </article>
+            <article class="ui-kit-case-navigation-sample">
+              <strong>Último caso</strong>
+              <nav class="case-nav" aria-label="Último caso">
+                <a class="button secondary" href="#">Caso anterior</a>
+              </nav>
+              <code>case-nav/last</code>
+            </article>
+          </div>
+          <p class="ui-kit-code-note"><code>.case-nav</code> · <code>.button.secondary</code> para anterior (izquierda) · <code>.button.primary</code> para siguiente (derecha). El primer y último caso muestran únicamente la acción disponible.</p>
+        </div>
+      </section>
+
+      <section class="ui-kit-section" aria-labelledby="ui-kit-copy-title">
+        <div class="ui-kit-section-heading">
+          <p class="eyebrow">05 · Contenido</p>
+          <h2 id="ui-kit-copy-title">Plantillas de texto</h2>
+          <p>Nombramos las estructuras que se repiten; los textos concretos cambian según cada sección o proyecto.</p>
+        </div>
+        <div class="ui-kit-copy-grid">
+          <article class="ui-kit-component-panel ui-kit-copy-sample">
+            <code>section-intro</code>
+            <p class="eyebrow">Proyectos destacados</p>
+            <h3>Distintas formas de diseñar, explorar y construir.</h3>
+            <p>Etiqueta breve + título de sección + descripción opcional. Se repite en Enfoque, Proyectos, Archivo, Experimentos, Diseño Gráfico, Skills y Sobre mí.</p>
+          </article>
+          <article class="ui-kit-component-panel ui-kit-copy-sample">
+            <code>directory-intro</code>
+            <p class="eyebrow">Portfolio · Case studies</p>
+            <h3>Case studies de UX/UI y producto.</h3>
+            <p>Etiqueta de categoría + título del listado + bajada. Se usa en los directorios de UX/UI y Diseño Gráfico.</p>
+          </article>
+          <article class="ui-kit-component-panel ui-kit-copy-sample">
+            <code>case-study-intro</code>
+            <p class="eyebrow">Experiencia web · Seguros · Figma + Webflow</p>
+            <h3>Asesuisa: experiencias web responsive para una marca más clara.</h3>
+            <p>Disciplina y contexto + título del caso + resumen. Se repite en las páginas de casos de estudio.</p>
+          </article>
+          <article class="ui-kit-component-panel ui-kit-copy-sample">
+            <code>case-section-title</code>
+            <p class="eyebrow">Contenido de caso</p>
+            <h3>El reto de diseño</h3>
+            <p>Subtítulo que nombra una etapa del relato; el texto que lo sigue es propio de cada proyecto.</p>
+          </article>
+          <article class="ui-kit-component-panel ui-kit-copy-sample">
+            <code>home-hero</code>
+            <p class="eyebrow">Melisa Delgado · Portfolio UX/UI 2026</p>
+            <h3>La curiosidad mató al gato, pero el gato murió sabiendo.</h3>
+            <p>Introducción propia del inicio; su frase principal es singular y no se repite como plantilla en otras páginas.</p>
+          </article>
+          <article class="ui-kit-component-panel ui-kit-copy-sample">
+            <code>about-intro</code>
+            <p class="eyebrow">Sobre mí · CV completo</p>
+            <h3>Hago alegremente cosas terriblemente serias.</h3>
+            <p>Presentación personal con su propio título y resumen; estructura especial de la página Sobre mí.</p>
+          </article>
+        </div>
+        <div class="ui-kit-name-list">
+          <p><strong>Se repite la estructura:</strong> <code>section-intro</code>, <code>directory-intro</code>, <code>case-study-intro</code> y <code>case-section-title</code>.</p>
+          <p><strong>Es único por contenido:</strong> las frases de cada eyebrow, título, bajada y subtítulo se redactan para su contexto; <code>home-hero</code> y <code>about-intro</code> son estructuras de página particulares.</p>
+        </div>
+      </section>
+
+      <section class="ui-kit-section" aria-labelledby="ui-kit-badges-title">
+        <div class="ui-kit-section-heading">
+          <p class="eyebrow">06 · Metadatos</p>
+          <h2 id="ui-kit-badges-title">Badges</h2>
+          <p>Se agrupan con <code>project-badges</code>; cada etiqueta usa <code>project-badge</code>.</p>
+        </div>
+        <div class="ui-kit-component-panel">
+          <div class="project-meta">
+            <span>UX/UI</span>
+            <span>Webflow</span>
+            <span>Design System</span>
+            <span>CMS</span>
+          </div>
+          <p class="ui-kit-code-note"><code>.project-meta</code> · <code>.project-meta &gt; span</code></p>
+        </div>
+      </section>
+
+      <section class="ui-kit-section" aria-labelledby="ui-kit-cards-title">
+        <div class="ui-kit-section-heading">
+          <p class="eyebrow">07 · Contenedores</p>
+          <h2 id="ui-kit-cards-title">Cards</h2>
+          <p>Incluye cards clickeables de proyectos y cards informativas de casos, que no son enlaces.</p>
+        </div>
+        <div class="ui-kit-card-grid">
+          <article class="project-card ui-kit-card-sample">
+            <div class="project-media ui-kit-project-placeholder" role="img" aria-label="Placeholder de portada del proyecto">
+              <span>Imagen / portada</span>
+            </div>
+            <div class="project-panel">
+              <div class="project-content">
+                <div class="project-meta"><span>UX/UI</span><span>Webflow</span></div>
+                <h3>Project card/default</h3>
+                <p>Portada, metadatos, título y descripción en una tarjeta vertical.</p>
+              </div>
+              <span class="text-link card-button">Leer caso</span>
+            </div>
+          </article>
+          <article class="learning-card ui-kit-card-sample">
+            <div class="learning-card-content">
+              <div class="project-meta"><span>HTML · CSS · JS</span><span>Firebase</span></div>
+              <h3>Learning card</h3>
+              <p>Badges, título y descripción agrupados arriba; CTA al fondo. Inset compartido de 28px por lado.</p>
+            </div>
+            <span class="text-link card-button">Leer proyecto</span>
+          </article>
+          <article class="project-card-landscape ui-kit-card-sample ui-kit-project-landscape-sample">
+            <div class="graphic-cover graphic-cover-sublimes graphic-cover-image">
+              <img src="assets/sublimes-manjares-logo.png" alt="Logotipo de Sublimes Manjares" />
+            </div>
+            <div class="graphic-panel">
+              <div class="graphic-content">
+                <div class="project-meta"><span>Branding</span><span>Visual Identity</span></div>
+                <h3>Project card/landscape</h3>
+                <p>La misma familia de proyecto, en una composición horizontal.</p>
+              </div>
+              <span class="text-link card-button">Leer caso</span>
+            </div>
+          </article>
+          <article class="case-section ui-kit-card-sample ui-kit-case-content">
+            <h3>Contexto de negocio</h3>
+            <div>
+              <p>La card organiza el título a la izquierda y el contenido editorial a la derecha.</p>
+              <p>Es una pieza informativa de dos columnas, no una acción ni un enlace.</p>
+            </div>
+          </article>
+          <article class="case-note-card ui-kit-card-sample">
+            <p class="eyebrow">01 · Contexto</p>
+            <h3>card-case-note</h3>
+            <p>Tarjeta informativa dentro del caso de estudio. No es clickeable.</p>
+          </article>
+          <article class="case-panel ui-kit-card-sample ui-kit-case-facts">
+            <h3>card-case-facts</h3>
+            <dl>
+              <div><dt>Tipo</dt><dd>Ficha del proyecto</dd></div>
+              <div><dt>Rol</dt><dd>Diseño UX/UI</dd></div>
+              <div><dt>Herramientas</dt><dd>Figma · Webflow</dd></div>
+            </dl>
+          </article>
+        </div>
+        <div class="ui-kit-card-state-block">
+          <h3>Estados de elementos clickeables</h3>
+          <p>Vista de referencia: hover solo en dispositivos con puntero; focus-visible al navegar con teclado; active durante la pulsación o tap.</p>
+          <div class="ui-kit-card-state-grid">
+            <strong>Project card/default</strong>
+            <a class="project-card ui-kit-state-card" href="#ui-kit-cards-title"><span>Imagen / portada</span><b>Default</b><small>UX/UI · Webflow</small><strong>Asesuisa</strong><span class="text-link">Leer caso</span></a>
+            <a class="project-card ui-kit-state-card" data-preview-state="hover" href="#ui-kit-cards-title"><span>Imagen / portada</span><b>Hover</b><small>UX/UI · Webflow</small><strong>Asesuisa</strong><span class="text-link">Leer caso</span></a>
+            <a class="project-card ui-kit-state-card" data-preview-state="focus" href="#ui-kit-cards-title"><span>Imagen / portada</span><b>Focus</b><small>UX/UI · Webflow</small><strong>Asesuisa</strong><span class="text-link">Leer caso</span></a>
+            <a class="project-card ui-kit-state-card" data-preview-state="active" href="#ui-kit-cards-title"><span>Imagen / portada</span><b>Active</b><small>UX/UI · Webflow</small><strong>Asesuisa</strong><span class="text-link">Leer caso</span></a>
+            <strong>Learning card</strong>
+            <a class="learning-card ui-kit-state-card" href="#ui-kit-cards-title"><b>Default</b><small>HTML · CSS · JS</small><strong>Luma</strong><span>Finanzas personales y trabajo freelance en un mismo lugar.</span><span class="text-link">Leer proyecto</span></a>
+            <a class="learning-card ui-kit-state-card" data-preview-state="hover" href="#ui-kit-cards-title"><b>Hover</b><small>HTML · CSS · JS</small><strong>Luma</strong><span>Finanzas personales y trabajo freelance en un mismo lugar.</span><span class="text-link">Leer proyecto</span></a>
+            <a class="learning-card ui-kit-state-card" data-preview-state="focus" href="#ui-kit-cards-title"><b>Focus</b><small>HTML · CSS · JS</small><strong>Luma</strong><span>Finanzas personales y trabajo freelance en un mismo lugar.</span><span class="text-link">Leer proyecto</span></a>
+            <a class="learning-card ui-kit-state-card" data-preview-state="active" href="#ui-kit-cards-title"><b>Active</b><small>HTML · CSS · JS</small><strong>Luma</strong><span>Finanzas personales y trabajo freelance en un mismo lugar.</span><span class="text-link">Leer proyecto</span></a>
+            <strong>Project card/landscape</strong>
+            <a class="project-card-landscape ui-kit-state-card" href="#ui-kit-cards-title"><b>Default</b><span>Imagen / portada</span><small>Branding · Visual identity</small><strong>Sublimes Manjares</strong><span class="text-link">Leer caso</span></a>
+            <a class="project-card-landscape ui-kit-state-card" data-preview-state="hover" href="#ui-kit-cards-title"><b>Hover</b><span>Imagen / portada</span><small>Branding · Visual identity</small><strong>Sublimes Manjares</strong><span class="text-link">Leer caso</span></a>
+            <a class="project-card-landscape ui-kit-state-card" data-preview-state="focus" href="#ui-kit-cards-title"><b>Focus</b><span>Imagen / portada</span><small>Branding · Visual identity</small><strong>Sublimes Manjares</strong><span class="text-link">Leer caso</span></a>
+            <a class="project-card-landscape ui-kit-state-card" data-preview-state="active" href="#ui-kit-cards-title"><b>Active</b><span>Imagen / portada</span><small>Branding · Visual identity</small><strong>Sublimes Manjares</strong><span class="text-link">Leer caso</span></a>
+          </div>
+        </div>
+        <div class="ui-kit-name-list ui-kit-card-names">
+          <p><code>project-card/default</code> → <code>.project-card</code></p>
+          <p><code>project-card/landscape</code> → <code>.project-card-landscape</code></p>
+          <p><code>learning-card</code> → <code>.learning-card</code></p>
+          <p><code>learning-card-padding</code> → <code>--space-card-padding: 28px</code> · contenido y CTA alineados</p>
+          <p><code>card-case-content</code> → <code>.case-section</code> · dos columnas, no clickeable</p>
+          <p><code>card-case-note</code> → <code>.case-note-card</code> · informativa, no clickeable</p>
+          <p><code>card-case-facts</code> → <code>.case-panel</code> · ficha del caso</p>
+          <p><code>card-cta</code> → <code>.card-button</code></p>
+          <p><code>badge-project</code> → <code>.project-meta &gt; span</code></p>
+        </div>
+      </section>
+
+      <footer class="ui-kit-footer">
+        <p>UI Kit local de Melisa Delgado · Fuera de la navegación pública</p>
+        <a class="text-link" href="index.html">Volver al portfolio</a>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Del recuerdo al reencuentro · Experimentos · Melisa Delgado</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#top">Melisa Delgado</a>
+      <nav class="nav" aria-label="Principal"><a href="portfolio.html">UX/UI</a><a href="graphic-design.html">Diseño Gráfico</a><a href="learning.html" aria-current="page">Experimentos</a><a href="about.html">Sobre mí</a></nav>
+      <div class="language-switch" role="group" aria-label="Selector de idioma"><button type="button" data-language="es" aria-pressed="true">ES</button><span aria-hidden="true">·</span><button type="button" data-language="en" aria-pressed="false">EN</button></div>
+      <a class="nav-cta" href="https://www.linkedin.com/in/melisa-lorena-delgado/" target="_blank" rel="noreferrer">¿Hablamos?</a>
+    </header>
+    <main class="case-main">
+      <section class="case-hero section learning-case-hero">
+        <div>
+          <a class="back-link" href="learning.html">Volver a Experimentos</a>
+          <p class="eyebrow">Experimentos · Micrositio personal</p>
+          <h1>Del recuerdo al reencuentro</h1>
+          <p class="case-summary">Una invitación digital para celebrar un cumpleaños y organizar un reencuentro. Un regalo personal que transforma la elección de una fecha en parte de la experiencia.</p>
+        </div>
+        <aside class="case-panel">
+          <h2>Ficha del proyecto</h2>
+          <dl>
+            <div><dt>Tipo</dt><dd>Micrositio de cumpleaños y coordinación de evento</dd></div>
+            <div><dt>Objetivo</dt><dd>Invitar a elegir la fecha de un viaje grupal</dd></div>
+            <div><dt>Mi rol</dt><dd>Diseño de experiencia, contenido y desarrollo web</dd></div>
+            <div><dt>Tecnologías</dt><dd>HTML · CSS · JavaScript · Apps Script · Google Sheets</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="section case-content learning-case-content">
+        <article class="case-section">
+          <h2>El desafío</h2>
+          <div>
+            <p>Este micrositio de cumpleaños fue creado como regalo para una amiga que vive en Bahía Blanca. La invitación propone elegir la fecha de un viaje a Córdoba para reencontrarse con su grupo de amigas.</p>
+            <p>La experiencia tenía que sentirse íntima y hecha a medida, pero también resolver una necesidad concreta: recibir la fecha elegida y compartirla en privado con quienes organizan el viaje. El proceso debía ser simple para la cumpleañera y fácil de gestionar para el grupo.</p>
+          </div>
+        </article>
+
+        <article class="case-section">
+          <h2>Elegir cómo recibir la respuesta</h2>
+          <div>
+            <p>Exploré tres alternativas para hacer llegar la fecha:</p>
+            <ul>
+              <li><strong>WhatsApp:</strong> podía notificar enseguida, pero el envío desde el sitio podía depender del dispositivo y requería resolver cómo abrir o iniciar la conversación.</li>
+              <li><strong>Correo directo:</strong> mantenía la respuesta privada, aunque enviar correos desde una web necesita una integración de servidor o un servicio intermedio.</li>
+              <li><strong>Google Forms y Apps Script:</strong> permitía registrar la fecha en una planilla y automatizar el correo al grupo.</li>
+            </ul>
+            <p>Elegí implementar un formulario propio conectado a una aplicación web de Google Apps Script. Así, el micrositio conserva el control del diseño y el tono, mientras que Apps Script procesa la respuesta, la registra en Google Sheets y envía el correo a las personas organizadoras.</p>
+            <p>El formulario no es un Google Form insertado: es una interfaz propia conectada al servicio.</p>
+            <p>El repositorio también conserva un endpoint de correo con Resend como alternativa explorada. El flujo de envío de fechas documentado para el proyecto utiliza Google Apps Script.</p>
+          </div>
+        </article>
+
+        <div class="case-two-column learning-feature-grid">
+          <article class="case-note-card"><p class="eyebrow">01 · Portada y recuerdos</p><h3>Empezar por la historia compartida</h3><p>Un saludo de cumpleaños da paso a un poema personalizado y a una galería de fotos con estética de álbum. El poema puede desplegarse cuando la visitante quiera.</p></article>
+          <article class="case-note-card"><p class="eyebrow">02 · La invitación</p><h3>Revelar el plan del viaje</h3><p>La segunda página presenta el origen, el destino, el horario y la descripción del viaje, junto con una playlist y un espacio dedicado a Albita.</p></article>
+          <article class="case-note-card"><p class="eyebrow">03 · El álbum</p><h3>Explorar las fotos</h3><p>Las imágenes se presentan como polaroids. Al abrir una, aparece un visor con navegación, contador y opción de descarga.</p></article>
+          <article class="case-note-card"><p class="eyebrow">04 · La fecha</p><h3>Elegir y confirmar</h3><p>La cumpleañera puede seleccionar una fecha a partir del 1 de noviembre de 2026. Al enviarla, recibe una confirmación con el día elegido y la fecha del viaje se actualiza en pantalla.</p></article>
+        </div>
+
+        <article class="case-section">
+          <h2>Cómo funciona el envío</h2>
+          <div>
+            <ol>
+              <li>La usuaria elige una fecha en el formulario del sitio.</li>
+              <li>El navegador envía la fecha a una aplicación web de Google Apps Script.</li>
+              <li>Apps Script registra la respuesta en Google Sheets y envía un correo a las direcciones configuradas.</li>
+              <li>El sitio confirma la recepción y guarda localmente la fecha para mostrarla si se vuelve a abrir en el mismo navegador.</li>
+            </ol>
+            <p>La interfaz explica que la respuesta es privada y no se publica en el micrositio. También muestra estados del envío y permite volver a intentarlo si hay un error de conexión.</p>
+          </div>
+        </article>
+
+        <article class="case-section">
+          <h2>Diseño y experiencia</h2>
+          <div>
+            <p>La dirección visual combina una base cálida y editorial con detalles artesanales: textura de papel, tonos crema, bordó, verde y rosa, y una combinación de tipografías expresivas y monoespaciadas.</p>
+            <p>La composición de álbum —fotos enmarcadas, captions manuscritos y pequeñas inclinaciones— ayuda a que el sitio se sienta como un recuerdo compartido. Las animaciones suaves y las transiciones acompañan el recorrido sin competir con el contenido.</p>
+            <p>Los controles cuentan con etiquetas y nombres descriptivos, y los estados se anuncian. En pantallas pequeñas, el visor de fotos admite navegación táctil.</p>
+            <p>El poema, la playlist y las referencias del grupo también forman parte del diseño: dan contexto afectivo a cada paso de la invitación.</p>
+          </div>
+        </article>
+
+        <article class="case-section">
+          <h2>Proceso</h2>
+          <div>
+            <ol>
+              <li>Definir el objetivo: celebrar el cumpleaños y pedir una fecha para organizar el reencuentro.</li>
+              <li>Comparar canales para recibir la respuesta: WhatsApp, correo y el flujo con Apps Script.</li>
+              <li>Diseñar el recorrido en dos momentos: saludo y recuerdos, y luego la revelación del viaje.</li>
+              <li>Implementar el formulario, la validación de fecha, el envío y la confirmación.</li>
+              <li>Construir el álbum interactivo con navegación entre fotos y descarga.</li>
+              <li>Personalizar poemas, mensajes y detalles del viaje con referencias del grupo.</li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="case-section">
+          <h2>Resultado y aprendizajes</h2>
+          <div>
+            <p>El resultado es una experiencia personalizada que une una celebración con una tarea organizativa. La destinataria puede recorrer los recuerdos, descubrir el viaje y elegir una fecha en el mismo sitio; el grupo recibe la respuesta por correo y puede consultarla en una planilla.</p>
+            <ul>
+              <li>El canal de respuesta también forma parte de la experiencia: tiene que ser cómodo para quien responde y útil para quienes organizan.</li>
+              <li>Separar la interfaz del procesamiento permite cuidar el diseño del formulario y resolver el registro y las notificaciones con otro servicio.</li>
+              <li>Una interfaz sencilla puede apoyarse en un flujo de datos que registre y comparta una respuesta de forma confiable.</li>
+              <li>Los detalles personales —el poema, las fotos, la playlist y las referencias compartidas— pueden darle propósito a una interacción funcional.</li>
+            </ul>
+          </div>
+        </article>
+        <nav class="case-nav" aria-label="Navegación de Learning"><a class="text-link" href="learning.html">Volver a Experimentos</a><a class="text-link" href="luma.html">Proyecto anterior: Luma</a></nav>
+      </section>
+    </main>
+    <footer class="footer"><span>Melisa Delgado · UX/UI Designer</span><span>Designed with curiosity.</span></footer>
+    <script src="translations.js" defer></script>
+  </body>
+</html>
