@@ -10,10 +10,9 @@
     <header class="site-header">
       <a class="brand" href="index.html#top">Melisa Delgado</a>
       <nav class="nav" aria-label="Principal">
-        <a href="index.html#approach">Enfoque</a>
-        <a href="portfolio.html">UX/UI</a>
-        <a href="graphic-design.html">Gráfica</a>
-        <a href="learning.html">Learning</a>
+        <a href="portfolio.html" aria-current="page">UX/UI</a>
+        <a href="graphic-design.html">Diseño Gráfico</a>
+        <a href="learning.html">Experimentos</a>
         <a href="about.html">Sobre mí</a>
       </nav>
       <div class="language-switch" role="group" aria-label="Selector de idioma">
@@ -39,11 +38,12 @@
 
       <section class="section portfolio-directory">
         <div class="featured-grid" aria-label="Case studies de UX/UI">
-          <article class="project-card project-card-large">
-            <a class="project-media project-media-link asesuisa project-media-image project-media-logo" href="asesuisa.html" aria-label="Leer caso de Asesuisa" data-project="Asesuisa">
+          <a class="project-card project-card-large interactive-card" href="asesuisa.html" aria-label="Leer caso de Asesuisa">
+            <div class="project-media asesuisa project-media-image project-media-logo" data-project="Asesuisa">
               <img src="assets/asesuisa-logo.png" alt="Logotipo de Asesuisa" />
-            </a>
-            <div class="project-content">
+            </div>
+            <div class="project-panel">
+              <div class="project-content">
               <div class="project-meta">
                 <span>UX/UI</span>
                 <span>Webflow</span>
@@ -55,15 +55,17 @@
                 Rediseño web, design system y Webflow para una marca de seguros más clara,
                 humana y escalable.
               </p>
-              <a href="asesuisa.html">Leer caso</a>
+              </div>
+              <span class="text-link card-button">Leer caso</span>
             </div>
-          </article>
+          </a>
 
-          <article class="project-card">
-            <a class="project-media project-media-link alianza project-media-image project-media-logo" href="alianza-americas.html" aria-label="Leer caso de Alianza Américas" data-project="Alianza Américas">
+          <a class="project-card interactive-card" href="alianza-americas.html" aria-label="Leer caso de Alianza Américas">
+            <div class="project-media alianza project-media-image project-media-logo" data-project="Alianza Américas">
               <img src="assets/alianza-americas-logo.png" alt="Logotipo de Alianza Americas" />
-            </a>
-            <div class="project-content">
+            </div>
+            <div class="project-panel">
+              <div class="project-content">
               <div class="project-meta">
                 <span>UI Design</span>
                 <span>Visual</span>
@@ -74,15 +76,17 @@
                 Comunicación visual, mejora continua y CMS bilingüe para una web institucional
                 con impacto social.
               </p>
-              <a href="alianza-americas.html">Leer caso</a>
+              </div>
+              <span class="text-link card-button">Leer caso</span>
             </div>
-          </article>
+          </a>
 
-          <article class="project-card">
-            <a class="project-media project-media-link portfolio-product" href="portfolio-as-product.html" aria-label="Leer caso de Portfolio as a Product">
+          <a class="project-card interactive-card" href="portfolio-as-product.html" aria-label="Leer caso de Portfolio as a Product">
+            <div class="project-media portfolio-product project-media-image">
               <span>Portfolio as a Product</span>
-            </a>
-            <div class="project-content">
+            </div>
+            <div class="project-panel">
+              <div class="project-content">
               <div class="project-meta">
                 <span>Strategy</span>
                 <span>AI</span>
@@ -93,9 +97,10 @@
                 Estrategia, curaduría, no-code e inteligencia artificial para diseñar mi
                 portfolio como producto.
               </p>
-              <a href="portfolio-as-product.html">Leer caso</a>
+              </div>
+              <span class="text-link card-button">Leer caso</span>
             </div>
-          </article>
+          </a>
         </div>
       </section>
     </main>

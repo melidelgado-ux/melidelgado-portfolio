@@ -10,10 +10,9 @@
     <header class="site-header">
       <a class="brand" href="#top">Melisa Delgado</a>
       <nav class="nav" aria-label="Principal">
-        <a href="#approach">Enfoque</a>
         <a href="portfolio.html">UX/UI</a>
-        <a href="graphic-design.html">Gráfica</a>
-        <a href="learning.html">Learning</a>
+        <a href="graphic-design.html">Diseño Gráfico</a>
+        <a href="learning.html">Experimentos</a>
         <a href="about.html">Sobre mí</a>
       </nav>
       <div class="language-switch" role="group" aria-label="Selector de idioma">
@@ -107,7 +106,7 @@
 
       <section id="work" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Featured Work</p>
+          <p class="eyebrow">Proyectos destacados</p>
           <h2>Distintas formas de diseñar, explorar y construir.</h2>
           <p>
             Rediseño web, comunicación visual, sistemas escalables, herramientas no-code,
@@ -116,11 +115,12 @@
         </div>
 
         <div class="featured-grid">
-          <article class="project-card project-card-large">
-            <a class="project-media project-media-link asesuisa project-media-image project-media-logo" href="asesuisa.html" aria-label="Leer caso de Asesuisa" data-project="Asesuisa">
+          <a class="project-card project-card-large interactive-card" href="asesuisa.html" aria-label="Leer caso de Asesuisa">
+            <div class="project-media asesuisa project-media-image project-media-logo" data-project="Asesuisa">
               <img src="assets/asesuisa-logo.png" alt="Logotipo de Asesuisa" />
-            </a>
-            <div class="project-content">
+            </div>
+            <div class="project-panel">
+              <div class="project-content">
               <div class="project-meta">
                 <span>UX/UI</span>
                 <span>Webflow</span>
@@ -132,15 +132,17 @@
                 Rediseño web, design system y Webflow para una marca de seguros más clara,
                 humana y escalable.
               </p>
-              <a href="asesuisa.html">Leer caso</a>
+              </div>
+              <span class="text-link card-button">Leer caso</span>
             </div>
-          </article>
+          </a>
 
-          <article class="project-card">
-            <a class="project-media project-media-link alianza project-media-image project-media-logo" href="alianza-americas.html" aria-label="Leer caso de Alianza Américas" data-project="Alianza Américas">
+          <a class="project-card interactive-card" href="alianza-americas.html" aria-label="Leer caso de Alianza Américas">
+            <div class="project-media alianza project-media-image project-media-logo" data-project="Alianza Américas">
               <img src="assets/alianza-americas-logo.png" alt="Logotipo de Alianza Americas" />
-            </a>
-            <div class="project-content">
+            </div>
+            <div class="project-panel">
+              <div class="project-content">
               <div class="project-meta">
                 <span>UI Design</span>
                 <span>Visual</span>
@@ -151,15 +153,17 @@
                 Comunicación visual, mejora continua y CMS bilingüe para una web institucional
                 con impacto social.
               </p>
-              <a href="alianza-americas.html">Leer caso</a>
+              </div>
+              <span class="text-link card-button">Leer caso</span>
             </div>
-          </article>
+          </a>
 
-          <article class="project-card">
-            <div class="project-media portfolio-product">
+          <a class="project-card interactive-card" href="portfolio-as-product.html" aria-label="Leer caso de Portfolio as a Product">
+            <div class="project-media portfolio-product project-media-image">
               <span>Portfolio as a Product</span>
             </div>
-            <div class="project-content">
+            <div class="project-panel">
+              <div class="project-content">
               <div class="project-meta">
                 <span>Strategy</span>
                 <span>AI</span>
@@ -170,16 +174,17 @@
                 Estrategia, curaduría, no-code e inteligencia artificial para diseñar mi
                 portfolio como producto.
               </p>
-              <a href="portfolio-as-product.html">Leer caso</a>
+              </div>
+              <span class="text-link card-button">Leer caso</span>
             </div>
-          </article>
+          </a>
         </div>
         <a class="button secondary graphic-more" href="portfolio.html">Ver más trabajos</a>
       </section>
 
       <section class="archive section">
         <div>
-          <p class="eyebrow">Project Archive</p>
+          <p class="eyebrow">Archivo de proyectos</p>
           <h2>Más recorrido, con el contexto correcto.</h2>
         </div>
         <p>
@@ -201,37 +206,42 @@
 
       <section id="learning" class="section split-section">
         <div class="section-heading compact">
-          <p class="eyebrow">Learning by Building</p>
+          <p class="eyebrow">Experimentos</p>
           <h2>Aprender construyendo.</h2>
           <p>Proyectos propios donde exploro herramientas, pruebo ideas y aprendo construyendo.</p>
-          <a class="button secondary learning-more" href="learning.html">Ver más trabajos</a>
+          <a class="button secondary learning-more learning-more-desktop" href="learning.html">Ver más trabajos</a>
         </div>
         <!-- Mantener aquí los dos proyectos más recientes de Learning, en el mismo orden que el listado. -->
         <div class="mini-grid">
-          <article class="mini-card">
-            <h3><a href="luma.html">Luma</a></h3>
-            <p>Prototipo para organizar finanzas personales y trabajo freelance en un mismo lugar.</p>
-            <div class="project-meta">
-              <span>Finanzas</span>
-              <span>Freelance</span>
+          <a class="mini-card interactive-card" href="luma.html" aria-label="Leer proyecto Luma">
+            <div class="mini-card-content">
+              <h3>Luma</h3>
+              <p>Prototipo para organizar finanzas personales y trabajo freelance en un mismo lugar.</p>
+              <div class="project-meta">
+                <span>Finanzas</span>
+                <span>Freelance</span>
+              </div>
             </div>
-            <a class="text-link" href="luma.html">Leer proyecto</a>
-          </article>
-          <article class="mini-card">
-            <h3><a href="para-nuestro-canelon.html">Del recuerdo al reencuentro</a></h3>
-            <p>Invitación digital de cumpleaños que convierte la elección de una fecha en un reencuentro.</p>
-            <div class="project-meta">
-              <span>Micrositio</span>
-              <span>Apps Script</span>
+            <span class="text-link card-button">Leer proyecto</span>
+          </a>
+          <a class="mini-card interactive-card" href="para-nuestro-canelon.html" aria-label="Leer proyecto Del recuerdo al reencuentro">
+            <div class="mini-card-content">
+              <h3>Del recuerdo al reencuentro</h3>
+              <p>Invitación digital de cumpleaños que convierte la elección de una fecha en un reencuentro.</p>
+              <div class="project-meta">
+                <span>Micrositio</span>
+                <span>Apps Script</span>
+              </div>
             </div>
-            <a class="text-link" href="para-nuestro-canelon.html">Leer proyecto</a>
-          </article>
+            <span class="text-link card-button">Leer proyecto</span>
+          </a>
         </div>
+        <a class="button secondary learning-more learning-more-mobile" href="learning.html">Ver más trabajos</a>
       </section>
 
       <section id="graphic" class="section">
         <div class="section-heading">
-          <p class="eyebrow">Graphic Design</p>
+          <p class="eyebrow">Diseño Gráfico</p>
           <h2>La base visual también cuenta.</h2>
           <p>
             Mi base en diseño gráfico fortalece mi criterio visual, mi atención al detalle
@@ -239,11 +249,12 @@
           </p>
         </div>
         <div class="graphic-grid graphic-grid-single" aria-label="Proyectos de diseño gráfico">
-          <article class="graphic-card graphic-card-featured">
+          <a class="graphic-card graphic-card-featured graphic-card-link" href="sauco.html" aria-label="Leer caso de Sauco">
             <div class="graphic-cover graphic-cover-sauco graphic-cover-image">
               <img src="assets/sauco-cover.svg" alt="Portada de identidad visual de Sauco" />
             </div>
-            <div class="graphic-content">
+            <div class="graphic-panel">
+              <div class="graphic-content">
               <div class="project-meta">
                 <span>Brand Strategy</span>
                 <span>Branding</span>
@@ -251,12 +262,30 @@
               </div>
               <h3>Sauco</h3>
               <p>
-                Identidad visual y estrategia de marca para una marca de muebles a medida
+                Identidad visual y estrategia de marca para un emprendimiento de muebles a medida
                 pensada para la vida real.
               </p>
-              <a class="text-link" href="sauco.html">Leer caso</a>
+              </div>
+              <span class="text-link card-button">Leer caso</span>
             </div>
-          </article>
+          </a>
+          <a class="graphic-card graphic-card-featured graphic-card-link" href="sublimes-manjares.html" aria-label="Leer caso de Sublimes Manjares">
+            <div class="graphic-cover graphic-cover-sublimes graphic-cover-image">
+              <img src="assets/sublimes-manjares-logo.png" alt="Logotipo de Sublimes Manjares" />
+            </div>
+            <div class="graphic-panel">
+              <div class="graphic-content">
+              <div class="project-meta">
+                <span>Branding</span>
+                <span>Brand Strategy</span>
+                <span>Visual Identity</span>
+              </div>
+              <h3>Sublimes Manjares</h3>
+              <p>Identidad visual para una pastelería artesanal que celebra los pequeños momentos.</p>
+              </div>
+              <span class="text-link card-button">Leer caso</span>
+            </div>
+          </a>
         </div>
         <a class="button secondary graphic-more" href="graphic-design.html">Ver más trabajos</a>
       </section>
@@ -291,7 +320,7 @@
           <img src="assets/melisa-delgado.png" alt="Foto de Melisa Delgado" />
         </div>
         <div>
-          <p class="eyebrow">About</p>
+          <p class="eyebrow">Sobre mí</p>
           <h2>Hago alegremente cosas terriblemente serias.</h2>
           <p>
             Soy una UX/UI Designer con visión estratégica y enfoque centrado en el usuario.
