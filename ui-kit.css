@@ -514,6 +514,48 @@ html:not([data-local-ui-kit="true"]) body {
   margin-top: 0;
 }
 
+.ui-kit-mobile-menu-demo {
+  display: grid;
+  gap: 18px;
+  margin-top: 20px;
+  max-width: 420px;
+  padding: 24px;
+}
+
+.ui-kit-mobile-menu-demo > .eyebrow,
+.ui-kit-mobile-menu-demo > .ui-kit-code-note {
+  margin: 0;
+}
+
+.ui-kit-mobile-menu-bar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ui-kit-mobile-menu-bar .mobile-menu-toggle {
+  display: flex;
+}
+
+.ui-kit-mobile-menu-demo .mobile-menu-nav {
+  display: grid;
+  gap: 14px;
+}
+
+.ui-kit-mobile-menu-demo .mobile-menu-nav a {
+  font-size: 18px;
+  font-weight: var(--weight-bold);
+}
+
+.ui-kit-mobile-menu-demo .mobile-language-switch {
+  display: flex;
+}
+
+.ui-kit-mobile-menu-demo .mobile-menu-cta {
+  display: inline-flex;
+  justify-self: stretch;
+}
+
 .ui-kit-case-navigation {
   margin-top: 28px;
 }
