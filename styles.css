@@ -2306,7 +2306,6 @@ a.text-link:active,
   #learning .learning-more-mobile {
     display: inline-flex;
     justify-self: start;
-    margin-top: 24px;
   }
 
   .hero {
@@ -2405,8 +2404,26 @@ a.text-link:active,
 }
 
 @media (max-width: 640px) {
+  .skills .section-heading {
+    margin-bottom: 24px;
+  }
+
   #learning.split-section {
     gap: 24px;
+  }
+
+  #learning .learning-more-mobile {
+    margin-top: 0;
+  }
+
+  #approach > .section-heading,
+  #work > .section-heading,
+  #graphic > .section-heading {
+    margin-bottom: 24px;
+  }
+
+  #learning .section-heading.compact > p:not(.eyebrow) {
+    margin-bottom: 24px;
   }
 
   .cv-timeline > .section-heading {
@@ -2442,6 +2459,10 @@ a.text-link:active,
 
   .case-hero {
     padding-top: 72px;
+  }
+
+  .case-hero.case-hero-tight-mobile {
+    padding-top: 8px;
   }
 
   .case-hero:not(.case-hero-full) {
@@ -2596,11 +2617,10 @@ a.text-link:active,
   }
 
   .manifest {
-    padding-bottom: 70px;
-    padding-top: 70px;
+    padding-bottom: 48px;
+    padding-top: 48px;
   }
 
-  #approach,
   #about,
   .skills {
     padding-bottom: 50px;
@@ -2609,13 +2629,23 @@ a.text-link:active,
 
   .archive {
     gap: 24px;
-    padding-bottom: 70px;
-    padding-top: 70px;
+    padding-bottom: 36px;
+    padding-top: 36px;
   }
 
   #learning {
     padding-bottom: 50px;
     padding-top: 50px;
+  }
+
+  #approach,
+  #about,
+  #learning,
+  #work,
+  #graphic,
+  .skills {
+    padding-bottom: 36px;
+    padding-top: 36px;
   }
 
   .final-cta {
