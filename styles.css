@@ -2409,6 +2409,10 @@ a.text-link:active,
 }
 
 @media (max-width: 640px) {
+  .cv-timeline > .section-heading {
+    margin-bottom: 0;
+  }
+
   .project-card.graphic-directory-card .project-content > p {
     padding-top: 0;
   }
@@ -2440,6 +2444,10 @@ a.text-link:active,
     padding-top: 72px;
   }
 
+  .case-hero:not(.case-hero-full) {
+    padding-bottom: 24px;
+  }
+
   .case-hero.learning-case-hero {
     padding-top: 8px;
   }
@@ -2461,7 +2469,18 @@ a.text-link:active,
   }
 
   .case-carousel {
+    margin-bottom: 24px;
     padding: 20px;
+  }
+
+  .case-showcase {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .case-main > .section:not(.case-hero) {
+    padding-bottom: 0;
+    padding-top: 0;
   }
 
   .case-carousel-track {
