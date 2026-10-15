@@ -1426,12 +1426,8 @@ a.text-link:active,
 }
 
 .graphic-cover-sublimes img {
-  object-fit: contain;
-  object-position: center;
-}
-
-.graphic-directory-card .graphic-cover-sublimes img {
   object-fit: cover;
+  object-position: center;
 }
 
 .graphic-content {
@@ -2409,6 +2405,10 @@ a.text-link:active,
 }
 
 @media (max-width: 640px) {
+  #learning.split-section {
+    gap: 24px;
+  }
+
   .cv-timeline > .section-heading {
     margin-bottom: 0;
   }
@@ -2460,6 +2460,13 @@ a.text-link:active,
   .graphic-directory,
   .portfolio-directory {
     padding-top: 0;
+  }
+
+  .learning-directory,
+  .graphic-directory,
+  .portfolio-directory,
+  #cv {
+    margin-bottom: 112px;
   }
 
   .case-section,
