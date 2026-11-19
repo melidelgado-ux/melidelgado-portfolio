@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Miga · Experimentos · Melisa Delgado</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html#top">Melisa Delgado</a>
+      <nav class="nav" aria-label="Principal"><a href="portfolio.html">UX/UI</a><a href="graphic-design.html">Diseño Gráfico</a><a href="learning.html" aria-current="page">Experimentos</a><a href="about.html">Sobre mí</a></nav>
+      <div class="language-switch" role="group" aria-label="Selector de idioma"><button type="button" data-language="es" aria-pressed="true">ES</button><span aria-hidden="true">·</span><button type="button" data-language="en" aria-pressed="false">EN</button></div>
+      <a class="nav-cta" href="https://www.linkedin.com/in/melisa-lorena-delgado/" target="_blank" rel="noreferrer">Hablemos de tu proyecto</a>
+    </header>
+    <main class="case-main">
+      <section class="case-hero section learning-case-hero">
+        <div>
+          <a class="back-link" href="learning.html">Volver a Experimentos</a>
+          <p class="eyebrow">Experimentos · Curso de IA para UXers</p>
+          <h1>Miga</h1>
+          <p class="case-summary">Un recetario personal y colaborativo para guardar recetas propias y recibir las de familiares o amistades.</p>
+          <div class="actions">
+            <a class="button secondary" href="https://miga-six.vercel.app/" target="_blank" rel="noreferrer">Explorar la app</a>
+            <a class="button secondary" href="https://github.com/melidelgado-ux/Miga" target="_blank" rel="noreferrer">Explorar repositorio</a>
+          </div>
+        </div>
+        <aside class="case-panel">
+          <h2>Ficha del proyecto</h2>
+          <dl>
+            <div><dt>Tipo</dt><dd>Producto digital · Proyecto de curso de IA para UXers</dd></div>
+            <div><dt>Mi rol</dt><dd>Producto, UX/UI y construcción con asistencia de IA</dd></div>
+            <div><dt>Tecnologías</dt><dd>React · TypeScript · Vite · Firebase</dd></div>
+            <div><dt>Herramientas</dt><dd>Stitch · Google AI Studio · Codex</dd></div>
+            <div><dt>Período</dt><dd>Noviembre 2026</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="section case-content learning-case-content">
+        <article class="case-section">
+          <h2>El punto de partida</h2>
+          <div>
+            <p>Las recetas suelen quedar repartidas entre mensajes, fotos y anotaciones. Después cuesta encontrarlas, recordar dónde estaban o compartirlas con otras personas.</p>
+            <p>Para Miga, propuse reunir las recetas en una biblioteca personal y sumar nuevas mediante un enlace. Quien invita lo comparte; la persona invitada completa un formulario y envía la receta sin instalar la app ni crear una cuenta.</p>
+          </div>
+        </article>
+
+        <figure class="miga-recipe-visual">
+          <img src="assets/miga-receta-focaccia.jpg" alt="Focaccia de romero, fotografía de una receta de ejemplo incluida en Miga" />
+          <figcaption>Una receta de ejemplo del proyecto · Contenido de muestra</figcaption>
+        </figure>
+
+        <div class="case-two-column learning-feature-grid">
+          <article class="case-note-card"><p class="eyebrow">01 · Biblioteca</p><h3>Guardar y encontrar recetas</h3><p>Las recetas propias se pueden completar con foto, ingredientes, pasos, porciones, tiempo y dificultad. La búsqueda, los filtros y las colecciones ayudan a volver a ellas.</p></article>
+          <article class="case-note-card"><p class="eyebrow">02 · Preparación</p><h3>Cocinar siguiendo la receta</h3><p>En el detalle se ajustan las cantidades según las porciones y se marcan los ingredientes a medida que se usan.</p></article>
+          <article class="case-note-card"><p class="eyebrow">03 · Invitaciones</p><h3>Invitar a compartir recetas</h3><p>Quise mantener simple el aporte: solo son obligatorios el nombre de la receta y el autor; el resto de los campos es opcional.</p></article>
+          <article class="case-note-card"><p class="eyebrow">04 · Experiencia</p><h3>Hacer lugar a distintos ritmos</h3><p>La interfaz es responsive y usa controles grandes, mensajes claros y datos opcionales para que compartir una receta no se sienta como completar un trámite.</p></article>
+        </div>
+
+        <article class="case-section">
+          <h2>Diseño y construcción</h2>
+          <div>
+            <p>Durante el curso de IA para UXers, participé en la definición del alcance, la UX/UI y la construcción del producto. Usé Stitch para explorar la dirección visual, Google AI Studio para generar pantallas a partir de ese diseño y Codex para ajustar la interfaz e integrar GitHub, Vercel y Firebase.</p>
+            <p>La aplicación está construida con React y TypeScript. Firebase Authentication gestiona el acceso con Google y Cloud Firestore sincroniza recetas y colecciones por cuenta. Para las personas invitadas, el enlace de invitación abre un flujo público independiente del inicio de sesión.</p>
+            <p>Usé IA para explorar layouts y borradores de microcopy. Retuve las decisiones sobre alcance, criterios de aceptación, campos del formulario y voz final.</p>
+          </div>
+        </article>
+
+        <article class="case-section">
+          <h2>Lo que me dejó el proyecto</h2>
+          <div>
+            <p>Miga nació como proyecto de un curso de IA para UXers. Ya venía explorando la creación de aplicaciones con plataformas no-code y mediante vibe coding, pero nunca había trabajado con este nivel de detalle y organización. En este proceso probé Stitch y Google AI Studio, herramientas que no había usado antes y que ampliaron mi panorama sobre cómo llevar una idea desde la exploración visual hasta una aplicación.</p>
+            <p>La experiencia me abrió nuevas posibilidades y me impulsó a seguir aprendiendo sobre cómo integrar la IA en mi práctica. Quiero seguir explorando estas herramientas con intención, manteniendo bajo mi criterio el alcance, la experiencia y las promesas del producto.</p>
+            <p>Me costó alinear las promesas de la interfaz con el estado real de Firebase. Trabajar en permisos, invitaciones y confirmaciones me mostró que cada mensaje debe corresponder con lo que ocurre al guardar o compartir una receta.</p>
+            <p>Me quedó una idea: una experiencia cálida también necesita promesas precisas. La claridad de cada flujo importa tanto como su apariencia.</p>
+          </div>
+        </article>
+
+        <article class="case-section learning-limitation">
+          <h2>Alcance y verificación</h2>
+          <div>
+            <p>En el Demo Day probé Miga en teléfono, tablet y escritorio, y recogí comentarios de familiares. No llegué a verificar si un mismo enlace de invitación admitía más de un envío. La documentación funcional especifica que las invitaciones pueden reutilizarse durante 30 días; por eso, presento ese plazo como una regla definida, no como un flujo que haya validado en esas pruebas.</p>
+            <p>El acceso a recetas y colecciones depende de que Firebase esté configurado y disponible.</p>
+          </div>
+        </article>
+        <nav class="case-nav" aria-label="Navegación entre casos"><a class="button primary" href="brilla.html">Siguiente caso</a></nav>
+      </section>
+    </main>
+    <footer class="footer"><span>Melisa Delgado · UX/UI Designer</span><span>Designed with curiosity.</span></footer>
+    <script src="navigation.js" defer></script>
+    <script src="translations.js" defer></script>
+  </body>
+</html>
